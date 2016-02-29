@@ -36,19 +36,21 @@
 					<img class="centeredIMG" src="resources/images/camcorder-regular.svg" alt="test">
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<hr></hr>
-				</div>
-			</div>
+			
 			<div class="row" id="secondRow">
 				<div class="col-md-5" id="heartPic">
 					<img class="centeredIMG" src="resources/images/heart-regular.svg" alt="test">
 				</div>
+				
 				<div class="col-md-2"></div>
 				<div class="col-md-5" id="piggybankPic">
 					<img class="centeredIMG"  src="resources/images/piggybank-regular.svg" alt="test">
 				</div>
+				<div class="row">
+				<div class="col-md-12">
+					<hr id="verticalline">
+				</div>
+			</div>
 			</div>
 		</div>
 	</div>
