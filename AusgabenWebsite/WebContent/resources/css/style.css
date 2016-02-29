@@ -18,8 +18,9 @@ body {
 .masthead-brand {
 	text-align: center;
 }
-.masthead-brand{
-	line-height:35px;
+
+.masthead-brand {
+	line-height: 35px;
 }
 
 .masthead-nav {
@@ -97,9 +98,17 @@ IMG.centeredIMG {
 }
 
 #verticalline {
-	
-	background-color: black; 
-	height: 400px; 
-	width: 2px; 
+	background-color: black;
+	height: 400px;
+	width: 2px;
 	margin-top: -400px
+}
+
+#horizontalline {
+	width: 850px;
+	height: 2px;
+	margin: -240px;
+	background: black;
+	margin-left: 15%;
+	
 }

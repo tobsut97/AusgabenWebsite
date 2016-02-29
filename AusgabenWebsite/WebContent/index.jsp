@@ -49,6 +49,7 @@
 				<div class="row">
 				<div class="col-md-12">
 					<hr id="verticalline">
+					<hr id="horizontalline"></hr>
 				</div>
 			</div>
 			</div>
