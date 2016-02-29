@@ -64,6 +64,7 @@
 					<img class="centeredIMGRight"
 						src="resources/images/heart-regular.svg" alt="test">
 				</div>
+				
 				<div class="col-md-2"></div>
 				<div id="inputPiggyBank" class="col-md-5">
 					<ul class="input-list">
@@ -75,6 +76,18 @@
 					<img class="centeredIMGLeft"
 						src="resources/images/piggybank-regular.svg" alt="test">
 				</div>
+				<div class="row">
+				<div class="col-md-12">
+					<hr id="verticalline">
+					<hr id="horizontalline"></hr>
+				</div>
+				<div class="row">
+				<div class="col-md-12">
+					<hr id="verticalline">
+					<hr id="horizontalline"></hr>
+				</div>
+			</div>
+			</div>
 			</div>
 		</div>
 	</div>

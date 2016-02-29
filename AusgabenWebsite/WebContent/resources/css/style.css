@@ -105,6 +105,8 @@ IMG.centeredIMGLeft {
 	margin-top: 15px;
 }
 
+<<<<<<<
+HEAD
 input[type="text"] {
 	display: block;
 	margin: auto;
@@ -128,9 +130,20 @@ li {
 
 #inputBag, #inputCam, #inputHeart, #inputPiggyBank {
 	background-color: grey;
-	display:none;
+	display: none;
 }
 
-#inputCam, #inputBag {
-	display: none;
+#verticalline {
+	background-color: black;
+	height: 400px;
+	width: 2px;
+	margin-top: -400px
+}
+
+#horizontalline {
+	width: 850px;
+	height: 2px;
+	margin: -240px;
+	background: black;
+	margin-left: 15%;
 }
