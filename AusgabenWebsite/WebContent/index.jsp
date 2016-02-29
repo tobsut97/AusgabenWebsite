@@ -17,13 +17,6 @@
 		<div class="masthead clearfix">
 			<div class="inner">
 				<h3 class="masthead-brand">Wieviel heane hüt scha widr brucht</h3>
-<!-- 				<nav>
-				<ul class="nav masthead-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Statistik</a></li>
-					<li><a href="#">Kontakt</a></li>
-				</ul>
-				</nav> -->
 			</div>
 		</div>
 	</div>
@@ -44,7 +37,9 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12"></div>
+				<div class="col-md-12">
+					<hr></hr>
+				</div>
 			</div>
 			<div class="row" id="secondRow">
 				<div class="col-md-5" id="heartPic">
