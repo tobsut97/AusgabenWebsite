@@ -28,39 +28,67 @@
 		</div>
 		<div id="container" class="container">
 			<div class="row" id="firstRow">
+				<div id="inputBag" class="col-md-5">
+					<ul class="input-list">
+						<li><input type="text" placeholder="Amount"></li>
+						<li><input type="text" placeholder="Notizen"></li>
+					</ul>
+				</div>
 				<div class="col-md-5" id="bagPic">
-					<img class="centeredIMG" src="resources/images/bag-regular.svg" alt="test">
+					<img class="centeredIMGRight"
+						src="resources/images/bag-regular.svg" alt="test">
 				</div>
 				<div class="col-md-2"></div>
+				<div id="inputCam" class="col-md-5">
+					<ul class="input-list">
+						<li><input type="text" placeholder="Amount"></li>
+						<li><input type="text" placeholder="Notizen"></li>
+					</ul>
+				</div>
 				<div class="col-md-5" id="camcorderPic">
-					<img class="centeredIMG" src="resources/images/camcorder-regular.svg" alt="test">
+					<img class="centeredIMGLeft"
+						src="resources/images/camcorder-regular.svg" alt="test">
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
-					<hr></hr>
-				</div>
+				<div class="col-md-12"></div>
 			</div>
 			<div class="row" id="secondRow">
+				<div id="inputHeart" class="col-md-5">
+					<ul class="input-list">
+						<li><input type="text" placeholder="Amount"></li>
+						<li><input type="text" placeholder="Notizen"></li>
+					</ul>
+				</div>
 				<div class="col-md-5" id="heartPic">
-					<img class="centeredIMG" src="resources/images/heart-regular.svg" alt="test">
+					<img class="centeredIMGRight"
+						src="resources/images/heart-regular.svg" alt="test">
 				</div>
 				<div class="col-md-2"></div>
+				<div id="inputPiggyBank" class="col-md-5">
+					<ul class="input-list">
+						<li><input type="text" placeholder="Amount"></li>
+						<li><input type="text" placeholder="Notizen"></li>
+					</ul>
+				</div>
 				<div class="col-md-5" id="piggybankPic">
-					<img class="centeredIMG"  src="resources/images/piggybank-regular.svg" alt="test">
+					<img class="centeredIMGLeft"
+						src="resources/images/piggybank-regular.svg" alt="test">
 				</div>
 			</div>
 		</div>
 	</div>
 	<script>
 		$("#bagPic").click(function() {
-			alert("bagPic");
+			$("#bagPic").hide();
+			$("#inputBag").show();
 		});
 		$("#heartPic").click(function() {
 			alert("heartPic");
 		});
 		$("#camcorderPic").click(function() {
-			alert("camcorderPic");
+			$("#camcorderPic").hide();
+			$("#inputCam").show();
 		});
 		$("#piggybankPic").click(function() {
 			alert("piggybankpic");

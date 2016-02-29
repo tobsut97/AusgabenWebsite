@@ -18,8 +18,9 @@ body {
 .masthead-brand {
 	text-align: center;
 }
-.masthead-brand{
-	line-height:35px;
+
+.masthead-brand {
+	line-height: 35px;
 }
 
 .masthead-nav {
@@ -86,12 +87,50 @@ h2 {
 	margin-top: 55px;
 }
 
-IMG.centeredIMG {
+IMG.centeredIMGRight {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	float: right;
+}
+
+IMG.centeredIMGLeft {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	float: left;
 }
 
 #heading {
 	margin-top: 15px;
+}
+
+input[type="text"] {
+	display: block;
+	margin: auto;
+	font-family: sans-serif;
+	font-size: 18px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+}
+
+.input-list input[type="text"] {
+	padding: 10px;
+	border: solid 1px #dcdcdc;
+	transition: box-shadow 0.3s, border 0.3s;
+}
+
+li {
+	list-style: none;
+	margin: 5px;
+}
+
+#inputBag, #inputCam, #inputHeart, #inputPiggyBank {
+	background-color: grey;
+	display:none;
+}
+
+#inputCam, #inputBag {
+	display: none;
 }
