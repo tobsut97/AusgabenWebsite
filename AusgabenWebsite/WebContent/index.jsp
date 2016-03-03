@@ -97,14 +97,16 @@
 			$("#inputBag").show();
 		});
 		$("#heartPic").click(function() {
-			alert("heartPic");
+			$("#heartPic").hide();
+			$("#inputHeart").show();
 		});
 		$("#camcorderPic").click(function() {
 			$("#camcorderPic").hide();
 			$("#inputCam").show();
 		});
 		$("#piggybankPic").click(function() {
-			alert("piggybankpic");
+			$("#piggybankPic").hide();
+			$("#inputPiggyBank").show();
 		});
 	</script>
 </body>
