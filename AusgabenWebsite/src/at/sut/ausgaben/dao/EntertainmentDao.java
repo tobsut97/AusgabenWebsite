@@ -16,6 +16,10 @@ public class EntertainmentDao {
 		Statement stmt = connection.createStatement();
 	}
 	
+	public void insertNotes(String note) throws Exception{
+		Connection connection = getConnection();
+		Statement stmt = connection.createStatement();
+	}
 	
 	private Connection getConnection() throws Exception {
 		Class.forName("com.mysql.jdbc.Driver");
