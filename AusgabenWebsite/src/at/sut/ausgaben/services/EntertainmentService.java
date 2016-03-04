@@ -12,6 +12,7 @@ import javax.ws.rs.core.Response;
 
 import at.sut.ausgaben.dao.EntertainmentDao;
 
+@Path("entertainment/")
 public class EntertainmentService {
 	// Amount in Datenbank eintragen
 	@POST

@@ -11,6 +11,69 @@
 
 <link href="resources/css/style.css" rel="stylesheet">
 <title>Ausgabenrechner</title>
+<script>
+	$(function() {
+		
+	
+		$("#bagPic").click(function() {
+			$("#bagPic").hide();
+			$("#inputBag").show();
+		});
+		$("#heartPic").click(function() {
+			$("#heartPic").hide();
+			$("#inputHeart").show();
+		});
+		$("#camcorderPic").click(function() {
+			$("#camcorderPic").hide();
+			$("#inputCam").show();
+		});
+		$("#piggybankPic").click(function() {
+			$("#piggybankPic").hide();
+			$("#inputPiggyBank").show();
+		}); 
+		
+		$("#ok").click(function() {
+			var amount = $("#amountBag").val();
+			var notes = $("#notesBag").val();
+			insertAmount(amount);
+		});
+		
+		function insertAmount(amount) {
+			alert("hallo");
+			var postData={};
+			postData.amount = amount;
+			$.ajax({
+				dataType:'json',
+				contentType:'application/json',
+				type:'POST',
+				url:'<%=request.getContextPath()%>/rest/entertainment/',
+				data : JSON.stringify(postData),
+				statusCode : {
+					201 : function(data) {
+						alert("works");
+					}
+				}
+			});
+		}
+		
+		function insertNotes(notes) {
+			var postData={};
+			postData.notes = notes;
+			$.ajax({
+				dataType:'json',
+				contentType:'application/json',
+				type:'POST',
+				url:'<%=request.getContextPath()%>/rest/entertainment/',
+				data : JSON.stringify(postData),
+				statusCode : {
+					201 : function(data) {
+						alert("works");
+					}
+				}
+			});
+		}
+	});		
+	</script>
 </head>
 <body>
 	<div class="cover-container">
@@ -30,8 +93,9 @@
 			<div class="row" id="firstRow">
 				<div id="inputBag" class="col-md-5">
 					<ul class="input-list">
-						<li><input type="text" placeholder="Amount"></li>
-						<li><input type="text" placeholder="Notizen"></li>
+						<li><input type="text" placeholder="Amount" id="amountBag"></li>
+						<li><input type="text" placeholder="Notizen" id="notesBag"></li>
+						<button id="ok">OK!</button>
 					</ul>
 				</div>
 				<div class="col-md-5" id="bagPic">
@@ -64,7 +128,7 @@
 					<img class="centeredIMGRight"
 						src="resources/images/heart-regular.svg" alt="test">
 				</div>
-				
+
 				<div class="col-md-2"></div>
 				<div id="inputPiggyBank" class="col-md-5">
 					<ul class="input-list">
@@ -77,37 +141,20 @@
 						src="resources/images/piggybank-regular.svg" alt="test">
 				</div>
 				<div class="row">
-				<div class="col-md-12">
-					<hr id="verticalline">
-					<hr id="horizontalline"></hr>
+					<div class="col-md-12">
+						<hr id="verticalline">
+						<hr id="horizontalline"></hr>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<hr id="verticalline">
+							<hr id="horizontalline"></hr>
+						</div>
+					</div>
 				</div>
-				<div class="row">
-				<div class="col-md-12">
-					<hr id="verticalline">
-					<hr id="horizontalline"></hr>
-				</div>
-			</div>
-			</div>
 			</div>
 		</div>
 	</div>
-	<script>
-		$("#bagPic").click(function() {
-			$("#bagPic").hide();
-			$("#inputBag").show();
-		});
-		$("#heartPic").click(function() {
-			$("#heartPic").hide();
-			$("#inputHeart").show();
-		});
-		$("#camcorderPic").click(function() {
-			$("#camcorderPic").hide();
-			$("#inputCam").show();
-		});
-		$("#piggybankPic").click(function() {
-			$("#piggybankPic").hide();
-			$("#inputPiggyBank").show();
-		});
-	</script>
+
 </body>
 </html>
