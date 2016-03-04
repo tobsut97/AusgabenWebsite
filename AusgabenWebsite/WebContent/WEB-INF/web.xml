@@ -3,11 +3,11 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
-	
+
 	<display-name>AusgabenWebsite</display-name>
-	
+
 	<servlet>
-		<servlet-name>Ausgaben Website REST Service</servlet-name>
+		<servlet-name>Jersey REST Service</servlet-name>
 		<servlet-class></servlet-class>
 		<init-param>
 			<param-name></param-name>
@@ -15,12 +15,11 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	
 	<servlet-mapping>
 		<servlet-name>Jersey REST Service</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
-	
+
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
@@ -29,5 +28,5 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
-	
+
 </web-app>
