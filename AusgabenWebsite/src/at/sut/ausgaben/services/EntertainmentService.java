@@ -1,5 +1,6 @@
 package at.sut.ausgaben.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -11,36 +12,43 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import at.sut.ausgaben.dao.EntertainmentDao;
+import at.sut.ausgaben.vo.Entertainment;
 
 @Path("EntertainmentService/")
 public class EntertainmentService {
+	private List<Entertainment> entertainmentList = new ArrayList<Entertainment>();
 	
-	// Amount in Datenbank eintragen
+	// Entertainment in Datenbank eintragen
 	@POST
 	@Path("")
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-	public Response insertAmount(int amount) throws Exception {
+	public Response insertAmount(Entertainment et) throws Exception {
 		try {
 			EntertainmentDao dao = new EntertainmentDao();
-			dao.insertAmount(amount);
+			dao.insertEntertainment(et);
 			return Response.status(201).build();
 		} catch (Exception e) {
 			return Response.status(400).build();
 		}
 	}
 
-	//Notizen in Datenbank eintragen
-	@POST
-	@Path("")
-	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-	public Response insertNotes(String notes) throws Exception {
+	
+	//Entertainment aus Datenbank auslesen
+	@GET
+	@Path("/entertainments")
+	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+	public List<Entertainment> getAllEntertainments() {
+		entertainmentList.clear();
 		try {
 			EntertainmentDao dao = new EntertainmentDao();
-			dao.insertNotes(notes);
-			return Response.status(201).build();
+			this.entertainmentList = dao.getAllEntertainment();
 		} catch (Exception e) {
-			return Response.status(400).build();
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		return entertainmentList;
+		
 	}
+	
 
 }

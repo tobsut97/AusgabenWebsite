@@ -14,7 +14,8 @@
 <script>
 	$(function() {
 		
-	
+		
+		//click functions
 		$("#bagPic").click(function() {
 			$("#bagPic").hide();
 			$("#inputBag").show();
@@ -38,10 +39,18 @@
 			insertAmount(amount);
 		});
 		
-		function insertAmount(amount) {
-			alert("hallo");
+		//
+		//normal functions
+		//
+		
+		
+		//insert new entertainment
+		function insertEntertainment() {
 			var postData={};
+			var actualDate = new Date().toISOString().slice(0, 19).replace('T', ' ');  //sql datetime format
 			postData.amount = amount;
+			postData.notes = notes;
+			postData.date = actualDate;
 			$.ajax({
 				dataType:'json',
 				contentType:'application/json',
@@ -56,22 +65,6 @@
 			});
 		}
 		
-		function insertNotes(notes) {
-			var postData={};
-			postData.notes = notes;
-			$.ajax({
-				dataType:'json',
-				contentType:'application/json',
-				type:'POST',
-				url:'<%=request.getContextPath()%>/rest/entertainment/',
-				data : JSON.stringify(postData),
-				statusCode : {
-					201 : function(data) {
-						alert("works");
-					}
-				}
-			});
-		}
 	});		
 	</script>
 </head>
@@ -79,14 +72,13 @@
 	<div class="cover-container">
 		<div class="masthead clearfix">
 			<div class="inner">
-				<h3 class="masthead-brand">Wieviel heane hüt scha widr brucht</h3>
+				<h3 class="masthead-brand">HEADING</h3>
 			</div>
 		</div>
 	</div>
 	<div>
 		<div class="row" id="heading">
 			<div class="col-md-12 col-xs-12">
-				<h2>Wofür haben sie Geld ausgegeben?</h2>
 			</div>
 		</div>
 		<div id="container" class="container">
