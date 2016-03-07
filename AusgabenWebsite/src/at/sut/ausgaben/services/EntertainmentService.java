@@ -14,7 +14,7 @@ import javax.ws.rs.core.Response;
 import at.sut.ausgaben.dao.EntertainmentDao;
 import at.sut.ausgaben.vo.Entertainment;
 
-@Path("EntertainmentService/")
+@Path("Entertainment/")
 public class EntertainmentService {
 	private List<Entertainment> entertainmentList = new ArrayList<Entertainment>();
 	
@@ -35,7 +35,7 @@ public class EntertainmentService {
 	
 	//Entertainment aus Datenbank auslesen
 	@GET
-	@Path("/entertainments")
+	@Path("")
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	public List<Entertainment> getAllEntertainments() {
 		entertainmentList.clear();
@@ -46,7 +46,7 @@ public class EntertainmentService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return entertainmentList;
+		return  entertainmentList;
 		
 	}
 	

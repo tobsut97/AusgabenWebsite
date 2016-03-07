@@ -11,10 +11,10 @@ import java.util.List;
 import at.sut.ausgaben.vo.Entertainment;
 
 public class EntertainmentDao {
-	private static final String ipAddress = "192.168.157.131";
+	private static final String ipAddress = "10.0.0.59";
 	private static final String databaseName = "ausgaben";
-	private static final String userName = "ausgabenTobi";
-	private static final String password = "tobias";
+	private static final String userName = "test";
+	private static final String password = "test";
 
 	// erstellt ein neues Entertainment
 	public void insertEntertainment(Entertainment e) throws Exception {
@@ -37,12 +37,12 @@ public class EntertainmentDao {
 		List<Entertainment> entertainmentList = new ArrayList<Entertainment>();
 		Connection connection = getConnection();
 		Statement stmt = connection.createStatement();
-		ResultSet resultSet = stmt.executeQuery("select * from Entertainment;");
+		ResultSet resultSet = stmt.executeQuery("select * from entertainment;");
 		resultSet.first();
 		while (!(resultSet.isAfterLast())) {
 			Entertainment e = new Entertainment(resultSet.getInt(1),
 					resultSet.getInt(2), resultSet.getString(3),
-					resultSet.getDate(4));
+					resultSet.getTimestamp(4));
 			entertainmentList.add(e);
 			resultSet.next();
 		}
