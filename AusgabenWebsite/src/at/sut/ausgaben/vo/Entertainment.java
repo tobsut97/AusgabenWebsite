@@ -9,18 +9,18 @@ public class Entertainment {
 	private int idEntertainment;
 	private int amount;
 	private String notes;
-	private Date date;
+	private Date timestamp;
 
 	public Entertainment() {
 	}
 
 	public Entertainment(int idEntertainment, int amount, String notes,
-			Date date) {
+			Date timestamp) {
 		super();
 		this.idEntertainment = idEntertainment;
 		this.amount = amount;
 		this.notes = notes;
-		this.date = date;
+		this.timestamp = timestamp;
 	}
 
 	public int getIdEntertainment() {
@@ -48,11 +48,11 @@ public class Entertainment {
 	}
 
 	public Date getDate() {
-		return date;
+		return timestamp;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setDate(Date timestamp) {
+		this.timestamp = timestamp;
 	}
 
 }

@@ -4,9 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
 
 import at.sut.ausgaben.vo.Entertainment;
 
@@ -17,15 +19,16 @@ public class EntertainmentDao {
 	private static final String password = "test";
 
 	// erstellt ein neues Entertainment
-	public void insertEntertainment(Entertainment e) throws Exception {
+	public void insertEntertainment(Entertainment ent) throws Exception {
 		Connection connection = getConnection();
 		Statement stmt = connection.createStatement();
-		stmt.executeUpdate("insert into Entertainment (amount,notes,date) VALUES ('"
-				+ e.getAmount()
+		java.util.Date date = new java.util.Date();
+		stmt.executeUpdate("insert into entertainment (amount,notes,date) VALUES ('"
+				+ ent.getAmount()
 				+ "','"
-				+ e.getNotes()
+				+ ent.getNotes()
 				+ "','"
-				+ e.getDate()
+				+ (new Timestamp(date.getTime()))
 				+ "');");
 		stmt.close();
 		connection.close();

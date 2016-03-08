@@ -21,14 +21,16 @@ public class EntertainmentService {
 	// Entertainment in Datenbank eintragen
 	@POST
 	@Path("")
-	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-	public Response insertAmount(Entertainment et) throws Exception {
+	@Consumes({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+	public Response insertAmount(Entertainment ent) throws Exception {
 		try {
 			EntertainmentDao dao = new EntertainmentDao();
-			dao.insertEntertainment(et);
-			return Response.status(201).build();
+			dao.insertEntertainment(ent);
+			return Response.status(200).build();
 		} catch (Exception e) {
+			e.printStackTrace();
 			return Response.status(400).build();
+			
 		}
 	}
 
@@ -46,7 +48,7 @@ public class EntertainmentService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return  entertainmentList;
+		return entertainmentList;
 		
 	}
 	
