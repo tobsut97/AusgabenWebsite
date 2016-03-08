@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -50,6 +52,20 @@ public class EntertainmentService {
 		}
 		return entertainmentList;
 		
+	}
+	
+	// Löscht ein Entertainment
+	@DELETE
+	@Path("/{id}")
+	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+	public Response deleteTask(@PathParam("id") int id) {
+		try {
+			EntertainmentDao dao = new EntertainmentDao();
+			dao.deleteEntertainment(id);
+			return Response.status(200).build();
+		} catch (Exception e) {
+			return Response.status(400).build();
+		}
 	}
 	
 

@@ -9,7 +9,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import at.sut.ausgaben.vo.Entertainment;
 
 public class EntertainmentDao {
@@ -28,14 +27,21 @@ public class EntertainmentDao {
 				+ "','"
 				+ ent.getNotes()
 				+ "','"
-				+ (new Timestamp(date.getTime()))
-				+ "');");
+				+ (new Timestamp(date.getTime())) + "');");
 		stmt.close();
 		connection.close();
 	}
 
+	// Löscht ein Entertainment
+	public void deleteEntertainment(int id) throws Exception {
+		Connection connection = getConnection();
+		Statement stmt = connection.createStatement();
+		stmt.executeUpdate("delete from entertainment where id=" + id + ";");
+		stmt.close();
+		connection.close();
+	}
 
-	//holt alle entertainment einträge
+	// holt alle entertainment einträge
 	public List<Entertainment> getAllEntertainment() throws Exception {
 		List<Entertainment> entertainmentList = new ArrayList<Entertainment>();
 		Connection connection = getConnection();
