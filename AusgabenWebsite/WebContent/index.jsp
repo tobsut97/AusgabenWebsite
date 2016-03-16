@@ -23,6 +23,13 @@
 		
 		alert("viewportwidth:" + viewportWidth + " viewportheight:" + viewportHeight);
 		
+		 $("#front1").click(function(){
+		     alert("front1");
+		 });
+		 
+		 $("#back1").click(function(){
+		 });
+		
 		
 /* 		//click functions
 		$("#bagPic").click(function() {
@@ -173,38 +180,27 @@
 	</div> -->
 	<div class="flip-container">
 		<div class="flipper">
-			<div id="front1">
-
-			</div>
-			<div id="back1"></div>
+			<div id="front2" class="front"></div>
+			<div id="back2" class="back"></div>
 		</div>
 	</div>
 	<div class="flip-container">
 		<div class="flipper">
-			<div id="front2">
-
-			</div>
-			<div id="back2"></div>
+			<div id="front1" class="front"></div>
+			<div id="back1" class="back"></div>
 		</div>
 	</div>
 	<div class="flip-container">
 		<div class="flipper">
-			<div id="front3">
-
-			</div>
-			<div id="back3"></div>
+			<div id="front4" class="front"></div>
+			<div id="back4" class="back"></div>
 		</div>
 	</div>
-		<div class="flip-container">
+	<div class="flip-container">
 		<div class="flipper">
-			<div id="front4">
-
-			</div>
-			<div id="back4"></div>
+			<div id="front3" class="front"></div>
+			<div id="back3" class="back"></div>
 		</div>
-	</div>
-	<div id="test">
-	
 	</div>
 
 	<!-- 	<div class="flipper" id="lt">

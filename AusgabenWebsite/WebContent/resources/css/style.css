@@ -2,84 +2,6 @@ body {
 	font-family: "Helvetica";
 }
 
-
-
-img {
-	width: 200px;
-	height: 200px;
-}
-
-h2 {
-	text-align: center;
-		background-color: #E3F2FD;
-
-	line-height: 40px;
-	margin-top: -9px;
-}
-
-#secondRow {
-	margin-top: 55px;
-}
-
-IMG.centeredIMGRight {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	float: right;
-}
-
-IMG.centeredIMGLeft {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	float: left;
-}
-
-#heading {
-	margin-top: 15px;
-}
-
-input[type="text"] {
-	display: block;
-	margin: auto;
-	font-family: sans-serif;
-	font-size: 18px;
-	appearance: none;
-	box-shadow: none;
-	border-radius: none;
-}
-
-.input-list input[type="text"] {
-	padding: 10px;
-	border: solid 1px #dcdcdc;
-	transition: box-shadow 0.3s, border 0.3s;
-}
-
-li {
-	list-style: none;
-	margin: 5px;
-}
-
-#inputBag, #inputCam, #inputHeart, #inputPiggyBank {
-	background-color: grey;
-	height: 250px;
-	display: none;
-}
-
-#verticalline {
-	background-color: black;
-	height: 400px;
-	width: 2px;
-	margin-top: -400px
-}
-
-#horizontalline {
-	width: 850px;
-	height: 2px;
-	margin: -240px;
-	background: black;
-	margin-left: 15%;
-} */
 html, body {
 	padding: 0;
 	margin: 0;
@@ -87,51 +9,16 @@ html, body {
 	width: 100vw;
 }
 
-.imagebox {
-	height: 100%;
-}
-
-.imagebox img {
-	position: relative;
-	top: 20%;
-	left: 25%;
-}
-
-#rt {
-	background-color: #B6088B;
-	height: 50%;
-	width: 50%;
-	float: right;
-}
-
-#lb {
-	background-color: #F8630B;
-	height: 50%;
-	width: 50%;
-	float: left;
-}
-
-#rb {
-	background-color: #46D509;
-	height: 50%;
-	width: 50%;
-	float: right;
-}
-
-.icons {
-	width: 50%;
-	height: 50%;
-}
-
 .flip-container {
 	perspective: 1000;
-	position:absolute;
-	top:0%;
-	left:0%;
-	right:50%;
-	bottom:50%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	right: 50%;
+	bottom: 50%;
 	height: 100vh;
 	width: 100vw;
+	height: 100vh
 }
 
 #flipper {
@@ -149,6 +36,13 @@ html, body {
 	width: 50%;
 	background-color: green;
 	height: 50%;
+	background-image: url("../images/bag-regular.svg");
+	background-size: 60% 60%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	right: 50%;
+	bottom: 50%;
 }
 
 #back1 {
@@ -163,6 +57,9 @@ html, body {
 	left: 0%;
 	right: 50%;
 	bottom: 50%;
+	left: 0%;
+	right: 50%;
+	bottom: 50%;
 }
 
 #front2 {
@@ -174,6 +71,11 @@ html, body {
 	right: 0%;
 	bottom: 50%;
 	background-color: blue;
+	background-image: url("../images/camcorder-regular.svg");
+	background-size: 60% 60%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 #back2 {
@@ -196,6 +98,11 @@ html, body {
 	right: 50%;
 	bottom: 0%;
 	background-color: yellow;
+	background-image: url("../images/piggybank-regular.svg");
+	background-size: 60% 60%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 #back3 {
@@ -217,7 +124,12 @@ html, body {
 	top: 50%;
 	right: 0%;
 	bottom: 0%;
-	background-color:red;
+	background-color: red;
+	background-image: url("../images/heart-regular.svg");
+	background-size: 60% 60%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 #back4 {
@@ -228,5 +140,31 @@ html, body {
 	top: 50%;
 	right: 0%;
 	bottom: 0%;
-	background-color:red;
+	background-color: red;
+	background-size: 60% 60%;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+}
+
+
+.front, .back {
+	backface-visibility: hidden;
+
+}
+
+#front1:hover{
+	background-color:black;
+	transform:rotateY(180deg);
+}
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateY(180deg);
 }
