@@ -53,7 +53,7 @@ html, body {
 	bottom: 50%;
 	height: 50%;
 	width: 50%;
-	background-color: green;
+	background-color: black;
 	left: 0%;
 	right: 50%;
 	bottom: 50%;
@@ -144,27 +144,8 @@ html, body {
 	background-size: 60% 60%;
 }
 
-/* entire container, keeps perspective */
-.flip-container {
-	perspective: 1000;
+.front{
+	z-index:2;
 }
 
 
-.front, .back {
-	backface-visibility: hidden;
-
-}
-
-#front1:hover{
-	background-color:black;
-	transform:rotateY(180deg);
-}
-
-.front {
-	z-index: 2;
-	transform: rotateY(0deg);
-}
-
-.back {
-	transform: rotateY(180deg);
-}

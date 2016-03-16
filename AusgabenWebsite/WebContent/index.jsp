@@ -17,64 +17,81 @@
 <script>
 	
 	$(function() {
+			
+		
+		//switching between front and back #1
+		$("#front1").click(function(){
+			$("#back1").css("z-index", "3");
+			$("#front1").fadeTo(500,0.0);
+			$("#back1").fadeTo(500,1.0);
+		});
+		
+		$(".backToFront1").click(function(){
+			$("#back1").css("z-index", "1");
+			$("#front1").css("z-index", "2");
+			$("#back1").fadeTo(1500,0.0);
+			$("#front1").fadeTo(1500,1.0);			
+		});
+		
+		
+		//switching between front and back #2
+		$("#front2").click(function(){
+			$("#back2").css("z-index", "3");
+			$("#front2").fadeTo(1500,0.0);
+			$("#back2").fadeTo(1500,1.0);
+		});
+		
+		$(".backToFront2").click(function(){
+			$("#back2").css("z-index", "1");
+			$("#front2").css("z-index", "2");
+			$("#back2").fadeTo(1500,0.0);
+			$("#front2").fadeTo(1500,1.0);			
+		});
 
+		//switching between front and back #3
+		
+		$("#front3").click(function(){
+			$("#back3").css("z-index", "3");
+			$("#front3").fadeTo(500,0.0);
+			$("#back3").fadeTo(500,1.0);
+		});
+		
+		$(".backToFront3").click(function(){
+			$("#back3").css("z-index", "1");
+			$("#front3").css("z-index", "2");
+			$("#back3").fadeTo(1500,0.0);
+			$("#front3").fadeTo(1500,1.0);			
+		});
+		
+		
+		//switching between front and back #4
+		$("#front4").click(function(){
+			$("#back4").css("z-index", "3");
+			$("#front4").fadeTo(500,0.0);
+			$("#back4").fadeTo(500,1.0);
+		});
+		
+		$(".backToFront4").click(function(){
+			$("#back4").css("z-index", "1");
+			$("#front4").css("z-index", "2");
+			$("#back4").fadeTo(1500,0.0);
+			$("#front4").fadeTo(1500,1.0);			
+		});
+
+
+
+		
+
+
+
+		
+
+/* 		
 		var viewportHeight = $(window).height();
 		var viewportWidth = $(window).width();
 		
-		alert("viewportwidth:" + viewportWidth + " viewportheight:" + viewportHeight);
-		
-		 $("#front1").click(function(){
-		     alert("front1");
-		 });
-		 
-		 $("#back1").click(function(){
-		 });
-		
-		
-/* 		//click functions
-		$("#bagPic").click(function() {
-			$("#bagPic").hide();
-			$("#inputBag").show();
-		});
-		$("#heartPic").click(function() {
-			$("#heartPic").hide();
-			$("#inputHeart").show();
-		});
-		$("#camcorderPic").click(function() {
-			$("#camcorderPic").hide();
-			$("#inputCam").show();
-		});
-		$("#piggybankPic").click(function() {
-			$("#piggybankPic").hide();
-			$("#inputPiggyBank").show();
-		});  */
-		
-		$("#flip3D").click(function() {
-			alert("top-left clicked");
-		});
-		
-		$("#rt").click(function() {
-			alert("top-right clicked");
-		});
-		
-		$("#lb").click(function() {
-			alert("bottom-left clicked");
-		});
-		
-		$("#rb").click(function() {
-			alert("bottom-right clicked");
-		});
-		
-		$("#ok").click(function() {
-			var amount = $("#amountBag").val();
-			var notes = $("#notesBag").val();
-			insertAmount(amount);
-		});
-		
-		//
-		//normal functions
-		//
-		
+		alert("viewportwidth:" + viewportWidth + " viewportheight:" + viewportHeight); */
+
 		
 		//insert new entertainment
 		function insertEntertainment() {
@@ -101,105 +118,36 @@
 </script>
 </head>
 <body>
-	<!-- 	<div class="cover-container">
-		<div class="masthead clearfix">
-			<div class="inner">
-				<h3 class="masthead-brand">HEADING</h3>
-			</div>
-		</div>
-	</div>
-	<div>
-		<div class="row" id="heading">
-			<div class="col-md-12 col-xs-12"></div>
-		</div>
-		<div id="container" class="container">
-			<div class="row" id="firstRow">
-				<div id="inputBag" class="col-md-5">
-					<ul class="input-list">
-						<li><input type="text" placeholder="Amount" id="amountBag"></li>
-						<li><input type="text" placeholder="Notizen" id="notesBag"></li>
-						<button id="ok">OK!</button>
-					</ul>
-				</div>
-				<div class="col-md-5" id="bagPic">
-					<img class="centeredIMGRight"
-						src="resources/images/bag-regular.svg" aflip3D="test">
-				</div>
-				<div class="col-md-2"></div>
-				<div id="inputCam" class="col-md-5">
-					<ul class="input-list">
-						<li><input type="text" placeholder="Amount"></li>
-						<li><input type="text" placeholder="Notizen"></li>
-					</ul>
-				</div>
-				<div class="col-md-5" id="camcorderPic">
-					<img class="centeredIMGLeft"
-						src="resources/images/camcorder-regular.svg" aflip3D="test">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12"></div>
-			</div>
-			<div class="row" id="secondRow">
-				<div id="inputHeart" class="col-md-5">
-					<ul class="input-list">
-						<li><input type="text" placeholder="Amount"></li>
-						<li><input type="text" placeholder="Notizen"></li>
-					</ul>
-				</div>
-				<div class="col-md-5" id="heartPic">
-					<img class="centeredIMGRight"
-						src="resources/images/heart-regular.svg" aflip3D="test">
-				</div>
-
-				<div class="col-md-2"></div>
-				<div id="inputPiggyBank" class="col-md-5">
-					<ul class="input-list">
-						<li><input type="text" placeholder="Amount"></li>
-						<li><input type="text" placeholder="Notizen"></li>
-					</ul>
-				</div>
-				<div class="col-md-5" id="piggybankPic">
-					<img class="centeredIMGLeft"
-						src="resources/images/piggybank-regular.svg" aflip3D="test">
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<hr id="verticalline">
-						<hr id="horizontalline"></hr>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<hr id="verticalline">
-							<hr id="horizontalline"></hr>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
 	<div class="flip-container">
 		<div class="flipper">
 			<div id="front2" class="front"></div>
-			<div id="back2" class="back"></div>
+			<div id="back2" class="back">
+				<button class="backToFront2" type="button">BACK</button>
+			</div>
 		</div>
 	</div>
 	<div class="flip-container">
 		<div class="flipper">
 			<div id="front1" class="front"></div>
-			<div id="back1" class="back"></div>
+			<div id="back1" class="back">
+				<button class="backToFront1" type="button">BACK</button>
+			</div>
 		</div>
 	</div>
 	<div class="flip-container">
 		<div class="flipper">
 			<div id="front4" class="front"></div>
-			<div id="back4" class="back"></div>
+			<div id="back4" class="back">
+				<button class="backToFront4" type="button">BACK</button>
+			</div>
 		</div>
 	</div>
 	<div class="flip-container">
 		<div class="flipper">
 			<div id="front3" class="front"></div>
-			<div id="back3" class="back"></div>
+			<div id="back3" class="back">
+				<button class="backToFront3" type="button">BACK</button>
+			</div>
 		</div>
 	</div>
 
