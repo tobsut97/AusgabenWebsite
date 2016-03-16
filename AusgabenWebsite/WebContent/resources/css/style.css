@@ -2,73 +2,7 @@ body {
 	font-family: "Helvetica";
 }
 
-.cover-container h3 {
-	color: white !important;
-}
 
-.cover-container {
-	margin-right: auto;
-	margin-left: auto;
-	background-color: #2196F3 !important;
-	padding-left: 230px;
-	padding-right: 300px;
-	height: 60px;
-}
-
-.masthead-brand {
-	text-align: center;
-}
-
-.masthead-brand {
-	line-height: 35px;
-}
-
-.masthead-nav {
-	float: right;
-}
-
-a, a:focus, a:hover {
-	color: #fff;
-}
-
-html, body {
-	height: 100%;
-}
-
-.masthead-brand {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-.masthead-nav>li {
-	display: inline-block;
-}
-
-.masthead-nav>li+li {
-	margin-left: 20px;
-}
-
-.masthead-nav>li>a {
-	padding-right: 0;
-	padding-left: 0;
-	font-size: 16px;
-	font-weight: bold;
-	color: #fff;
-	color: rgba(255, 255, 255, .75);
-	border-bottom: 2px solid transparent;
-}
-
-.masthead-nav>li>a:hover, .masthead-nav>li>a:focus {
-	background-color: transparent;
-	border-bottom-color: #a9a9a9;
-	border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.masthead-nav>.active>a, .masthead-nav>.active>a:hover, .masthead-nav>.active>a:focus
-	{
-	color: #fff;
-	border-bottom-color: #fff;
-}
 
 img {
 	width: 200px;
@@ -77,8 +11,8 @@ img {
 
 h2 {
 	text-align: center;
-	/* 	background-color: #E3F2FD;
- */
+		background-color: #E3F2FD;
+
 	line-height: 40px;
 	margin-top: -9px;
 }
@@ -104,7 +38,6 @@ IMG.centeredIMGLeft {
 #heading {
 	margin-top: 15px;
 }
-
 
 input[type="text"] {
 	display: block;
@@ -146,4 +79,154 @@ li {
 	margin: -240px;
 	background: black;
 	margin-left: 15%;
+} */
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+}
+
+.imagebox {
+	height: 100%;
+}
+
+.imagebox img {
+	position: relative;
+	top: 20%;
+	left: 25%;
+}
+
+#rt {
+	background-color: #B6088B;
+	height: 50%;
+	width: 50%;
+	float: right;
+}
+
+#lb {
+	background-color: #F8630B;
+	height: 50%;
+	width: 50%;
+	float: left;
+}
+
+#rb {
+	background-color: #46D509;
+	height: 50%;
+	width: 50%;
+	float: right;
+}
+
+.icons {
+	width: 50%;
+	height: 50%;
+}
+
+.flip-container {
+	perspective: 1000;
+	position:absolute;
+	top:0%;
+	left:0%;
+	right:50%;
+	bottom:50%;
+	height: 100vh;
+	width: 100vw;
+}
+
+#flipper {
+	height: 50vh;
+	width: 50vw;
+}
+
+#front1 {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	right: 50%;
+	bottom: 50%;
+	height: 50%;
+	width: 50%;
+	background-color: green;
+	height: 50%;
+}
+
+#back1 {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	right: 50%;
+	bottom: 50%;
+	height: 50%;
+	width: 50%;
+	background-color: green;
+	left: 0%;
+	right: 50%;
+	bottom: 50%;
+}
+
+#front2 {
+	position: absolute;
+	height: 50%;
+	width: 50%;
+	left: 50%;
+	top: 0%;
+	right: 0%;
+	bottom: 50%;
+	background-color: blue;
+}
+
+#back2 {
+	position: absolute;
+	height: 50%;
+	width: 50%;
+	left: 50%;
+	top: 0%;
+	right: 0%;
+	bottom: 50%;
+	background-color: blue;
+}
+
+#front3 {
+	position: absolute;
+	height: 50%;
+	width: 50%;
+	left: 0%;
+	top: 50%;
+	right: 50%;
+	bottom: 0%;
+	background-color: yellow;
+}
+
+#back3 {
+	position: absolute;
+	height: 50%;
+	width: 50%;
+	left: 0%;
+	top: 50%;
+	right: 50%;
+	bottom: 0%;
+	background-color: yellow;
+}
+
+#front4 {
+	position: absolute;
+	height: 50%;
+	width: 50%;
+	left: 50%;
+	top: 50%;
+	right: 0%;
+	bottom: 0%;
+	background-color:red;
+}
+
+#back4 {
+	position: absolute;
+	height: 50%;
+	width: 50%;
+	left: 50%;
+	top: 50%;
+	right: 0%;
+	bottom: 0%;
+	background-color:red;
 }
