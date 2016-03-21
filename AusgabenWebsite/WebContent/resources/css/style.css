@@ -130,13 +130,13 @@ span {
 	font-size: 18px;
 }
 
-input {
+#contentBack2 input {
 	background-color: Transparent;
 	border: 2px solid white;
 	outline: none;
 	color: white;
 	font-size: 24px;
-	width:100%;
+	width: 100%;
 	-webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease;
 	-o-transition: all 1s ease;
@@ -144,7 +144,7 @@ input {
 	padding: 10px;
 }
 
-input:hover {
+#contentBack2 input:hover {
 	background-color: #FA6666;
 }
 
@@ -156,11 +156,12 @@ input:hover {
 	font-weight: 700;
 	outline: none;
 	padding: 10px;
-	width:105%;
+	width: 105%;
 	-webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease;
 	-o-transition: all 1s ease;
 	transition: all 1s ease;
+	-webkit-transition: all 1s ease-in-out
 }
 
 #back2 button:hover {
@@ -174,9 +175,123 @@ span {
 	font-weight: bolder;
 }
 
-#contentBack2 {
+#contentBack2, #contentBack1, #contentBack3, #contentBack4 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
+}
+
+#back1 button {
+	background-color: #FBEF69;
+	color: black;
+	border: 2px solid white;
+	font-size: 20px;
+	font-weight: 700;
+	outline: none;
+	padding: 10px;
+	width: 105%;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+#back1 button:hover {
+	background-color: white;
+	color: black;
+}
+
+#contentBack1 input {
+	background-color: Transparent;
+	border: 2px solid white;
+	outline: none;
+	color: white;
+	font-size: 24px;
+	width: 100%;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	padding: 10px;
+}
+
+#contentBack1 input:hover {
+	background-color: #fbef69;
+}
+
+#contentBack4 input {
+	background-color: Transparent;
+	border: 2px solid white;
+	outline: none;
+	color: white;
+	font-size: 24px;
+	width: 100%;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	padding: 10px;
+}
+
+#contentBack4 input:hover {
+	background-color: #98e466;
+}
+
+#back4 button {
+	background-color: #98e466;
+	color: white;
+	border: 2px solid white;
+	font-size: 20px;
+	font-weight: 700;
+	outline: none;
+	padding: 10px;
+	width: 105%;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+#back4 button:hover {
+	background-color: white;
+	color: black;
+}
+
+#contentBack3 input {
+	background-color: Transparent;
+	border: 2px solid white;
+	outline: none;
+	color: black;
+	font-size: 24px;
+	width: 100%;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	padding: 10px;
+}
+
+#contentBack3 input:hover {
+	background-color: #4BBCF6;
+}
+
+#back3 button {
+	background-color: #4BBCF6;
+	color: white;
+	border: 2px solid white;
+	font-size: 20px;
+	font-weight: 700;
+	outline: none;
+	padding: 10px;
+	width: 105%;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+#back3 button:hover {
+	background-color: white;
+	color: black;
 }

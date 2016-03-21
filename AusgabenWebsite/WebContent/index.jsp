@@ -20,7 +20,7 @@
  			$("#back1").fadeIn(800);
 		});
 		
-		$("#back1").click(function(){
+		$("#backToFront1").click(function(){
 			$("#front1").fadeIn(800);
  			$("#back1").fadeOut(800);	
 		});
@@ -39,8 +39,10 @@
 				return;
 			}
 			insertEntertainment(amount,notes);
+			alert("dialog created succesfully");
 			$("#amountEntertainment").val('');
 			$("#notesEntertainment").val('');
+			$("#dialogEntertainment").show();
 			$("#front2").fadeIn(800);
  			$("#back2").fadeOut(800);		
 		});
@@ -52,7 +54,7 @@
  			$("#back3").fadeIn(800);
 		});
 		
-		$("#back3").click(function(){
+		$("#backToFront3").click(function(){
 			$("#front3").fadeIn(800);
  			$("#back3").fadeOut(800);			
 		});
@@ -64,7 +66,7 @@
  			$("#back4").css("display","block");
 		});
 		
-		$("#back4").click(function(){
+		$("#backToFront4").click(function(){
 			$("#back4").css("display","none");
  			$("#front4").css("display","block");			
 		});
@@ -85,7 +87,6 @@
 				data : JSON.stringify(postData),
 				statusCode : {
 					201 : function(data) {
-						alert("works");
 					}
 				}
 			});
@@ -98,35 +99,48 @@
 	<div class="flip-container">
 		<div id="back2" class="back">
 			<div id="contentBack2">
-				<span>Ich habe schon wieder ...</span>
+				<span>Ich habe schon wieder ...</span> <br></br> <input type="text"
+					class="amountInput" id="amountEntertainment"> <br></br> <span>Das
+					Geld war ... </span> <br></br> <input type="text" id="notesEntertainment">
 				<br></br>
-				<input type="text" class="amountInput" id="amountEntertainment">
-				<br></br>
-				<span>Das Geld war ... </span>
-				<br></br>
-				<input type="text" id="notesEntertainment">
-				<br></br>
-				<button type="button" id="backToFront2" class="bottomButton">JA ICH HABE</button>
+				<button type="button" id="backToFront2">JA ICH HABE</button>
 			</div>
 		</div>
 		<div id="front2" class="front"></div>
 	</div>
 	<div class="flip-container">
 		<div id="back1" class="back">
-			<button class="backToFront1" type="button">BACK</button>
+			<div id="contentBack1">
+				<span>Ich habe schon wieder ...</span> <br></br> <input type="text"
+					class="amountInput" id="amountShopping"> <br></br> <span>Das
+					Geld war ... </span> <br></br> <input type="text" id="notesShopping">
+				<br></br>
+				<button type="button" id="backToFront1">JA ICH HABE</button>
+			</div>
 		</div>
-		<div id="front1" class="front">
-		</div>
+		<div id="front1" class="front"></div>
 	</div>
 	<div class="flip-container">
 		<div id="back4" class="back">
-			<button class="backToFront4" type="button">BACK</button>
+			<div id="contentBack4">
+				<span>Ich habe schon wieder ...</span> <br></br> <input type="text"
+					class="amountInput" id="amountPiggy"> <br></br> <span>Das
+					Geld war ... </span> <br></br> <input type="text" id="notesPiggy">
+				<br></br>
+				<button type="button" id="backToFront4">JA ICH HABE</button>
+			</div>
 		</div>
 		<div id="front4" class="front"></div>
 	</div>
 	<div class="flip-container">
 		<div id="back3" class="back">
-			<button class="backToFront3" type="button">BACK</button>
+			<div id="contentBack3">
+				<span>Ich habe schon wieder ...</span> <br></br> <input type="text"
+					class="amountInput" id="amountHeart"> <br></br> <span>Das
+					Geld war ... </span> <br></br> <input type="text" id="notesHeart">
+				<br></br>
+				<button type="button" id="backToFront3">JA ICH HABE</button>
+			</div>
 		</div>
 		<div id="front3" class="front"></div>
 	</div>
