@@ -9,23 +9,6 @@ html, body {
 	width: 100vw;
 }
 
-.flip-container {
-	perspective: 1000;
-	position: absolute;
-	top: 0%;
-	left: 0%;
-	right: 50%;
-	bottom: 50%;
-	height: 100vh;
-	width: 100vw;
-	height: 100vh
-}
-
-#flipper {
-	height: 50vh;
-	width: 50vw;
-}
-
 #front1 {
 	position: absolute;
 	top: 0%;
@@ -35,14 +18,11 @@ html, body {
 	height: 50%;
 	width: 50%;
 	background-color: green;
-	height: 50%;
 	background-image: url("../images/bag-regular.svg");
 	background-size: 60% 60%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-position: center;
-	right: 50%;
-	bottom: 50%;
 }
 
 #back1 {
@@ -53,13 +33,7 @@ html, body {
 	bottom: 50%;
 	height: 50%;
 	width: 50%;
-	background-color: black;
-	left: 0%;
-	right: 50%;
-	bottom: 50%;
-	left: 0%;
-	right: 50%;
-	bottom: 50%;
+	background-color: green;
 }
 
 #front2 {
@@ -141,11 +115,15 @@ html, body {
 	right: 0%;
 	bottom: 0%;
 	background-color: red;
-	background-size: 60% 60%;
 }
 
-.front{
-	z-index:2;
+.front {
+	z-index: 200;
 }
 
-
+.back {
+	z-index: 1;
+}
+button{
+	display:none;
+}
