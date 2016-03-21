@@ -132,33 +132,51 @@ span {
 
 input {
 	background-color: Transparent;
-	border:2px solid white;
+	border: 2px solid white;
 	outline: none;
 	color: white;
-	width: 80%;
-	font-size: 18px;
+	font-size: 24px;
+	width:100%;
 	-webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease;
 	-o-transition: all 1s ease;
 	transition: all 1s ease;
-	padding:5px;
+	padding: 10px;
 }
 
 input:hover {
-	background-color:#FA6666;
-	
+	background-color: #FA6666;
 }
 
-button {
-	background-color: white;
-	color: grey;
+#back2 button {
+	background-color: #FA6666;
+	color: white;
 	border: 2px solid white;
 	font-size: 20px;
-	font-weight:700;
+	font-weight: 700;
 	outline: none;
-	width: 80%;
+	padding: 10px;
+	width:105%;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
 }
 
-.back p{
-	color:white;
+#back2 button:hover {
+	background-color: white;
+	color: black;
+}
+
+span {
+	color: white;
+	font-size: 24px;
+	font-weight: bolder;
+}
+
+#contentBack2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
 }

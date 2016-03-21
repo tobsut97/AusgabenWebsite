@@ -33,6 +33,14 @@
 		});
 		
 		$("#backToFront2").click(function(){
+			var amount = $("#amountEntertainment").val();
+			var notes = $("#notesEntertainment").val();
+			if (amount == "" || notes == "") {
+				return;
+			}
+			insertEntertainment(amount,notes);
+			$("#amountEntertainment").val('');
+			$("#notesEntertainment").val('');
 			$("#front2").fadeIn(800);
  			$("#back2").fadeOut(800);		
 		});
@@ -60,19 +68,20 @@
 			$("#back4").css("display","none");
  			$("#front4").css("display","block");			
 		});
+		
+/* 		$(".amountInput").val($(".amountInput").val() + "EURO ausgegeben.");
+ */		
 
 		//insert new entertainment
-		function insertEntertainment() {
+		function insertEntertainment(amount,notes) {
 			var postData={};
-			var actualDate = new Date().toISOString().slice(0, 19).replace('T', ' ');  //sql datetime format
 			postData.amount = amount;
 			postData.notes = notes;
-			postData.date = actualDate;
 			$.ajax({
 				dataType:'json',
 				contentType:'application/json',
 				type:'POST',
-				url:'<%=request.getContextPath()%>/rest/entertainment/',
+				url:'<%=request.getContextPath()%>/rest/Entertainment/',
 				data : JSON.stringify(postData),
 				statusCode : {
 					201 : function(data) {
@@ -89,12 +98,15 @@
 	<div class="flip-container">
 		<div id="back2" class="back">
 			<div id="contentBack2">
-				<p>Ich habe schon wieder ...</p>
-				<input type="text">
-				<p>Das Geld war ... </p>
-				<input type="text">
-				<p></p>
-				<button type="button" id="backToFront2">JA ICH HABE</button>
+				<span>Ich habe schon wieder ...</span>
+				<br></br>
+				<input type="text" class="amountInput" id="amountEntertainment">
+				<br></br>
+				<span>Das Geld war ... </span>
+				<br></br>
+				<input type="text" id="notesEntertainment">
+				<br></br>
+				<button type="button" id="backToFront2" class="bottomButton">JA ICH HABE</button>
 			</div>
 		</div>
 		<div id="front2" class="front"></div>
@@ -103,7 +115,8 @@
 		<div id="back1" class="back">
 			<button class="backToFront1" type="button">BACK</button>
 		</div>
-		<div id="front1" class="front"></div>
+		<div id="front1" class="front">
+		</div>
 	</div>
 	<div class="flip-container">
 		<div id="back4" class="back">
