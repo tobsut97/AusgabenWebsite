@@ -32,7 +32,7 @@
  			$("#back2").fadeIn(800);
 		});
 		
-		$("#back2").click(function(){
+		$("#backToFront2").click(function(){
 			$("#front2").fadeIn(800);
  			$("#back2").fadeOut(800);		
 		});
@@ -88,7 +88,14 @@
 <body>
 	<div class="flip-container">
 		<div id="back2" class="back">
-			<button class="backToFront2" type="button">BACK</button>
+			<div id="contentBack2">
+				<p>Ich habe schon wieder ...</p>
+				<input type="text">
+				<p>Das Geld war ... </p>
+				<input type="text">
+				<p></p>
+				<button type="button" id="backToFront2">JA ICH HABE</button>
+			</div>
 		</div>
 		<div id="front2" class="front"></div>
 	</div>

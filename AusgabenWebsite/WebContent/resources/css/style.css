@@ -17,7 +17,7 @@ html, body {
 	bottom: 50%;
 	height: 50%;
 	width: 50%;
-	background-color: green;
+	background-color: #4BBCF6;
 	background-image: url("../images/bag-regular.svg");
 	background-size: 60% 60%;
 	background-position: center;
@@ -33,7 +33,7 @@ html, body {
 	bottom: 50%;
 	height: 50%;
 	width: 50%;
-	background-color: green;
+	background-color: #4BBCF6;
 }
 
 #front2 {
@@ -44,7 +44,7 @@ html, body {
 	top: 0%;
 	right: 0%;
 	bottom: 50%;
-	background-color: blue;
+	background-color: #98E466;
 	background-image: url("../images/camcorder-regular.svg");
 	background-size: 60% 60%;
 	background-position: center;
@@ -60,7 +60,7 @@ html, body {
 	top: 0%;
 	right: 0%;
 	bottom: 50%;
-	background-color: blue;
+	background-color: #98E466;
 }
 
 #front3 {
@@ -71,7 +71,7 @@ html, body {
 	top: 50%;
 	right: 50%;
 	bottom: 0%;
-	background-color: yellow;
+	background-color: #FBEF69;
 	background-image: url("../images/piggybank-regular.svg");
 	background-size: 60% 60%;
 	background-position: center;
@@ -87,7 +87,7 @@ html, body {
 	top: 50%;
 	right: 50%;
 	bottom: 0%;
-	background-color: yellow;
+	background-color: #FBEF69;
 }
 
 #front4 {
@@ -98,7 +98,7 @@ html, body {
 	top: 50%;
 	right: 0%;
 	bottom: 0%;
-	background-color: red;
+	background-color: #FA6666;
 	background-image: url("../images/heart-regular.svg");
 	background-size: 60% 60%;
 	background-position: center;
@@ -114,7 +114,7 @@ html, body {
 	top: 50%;
 	right: 0%;
 	bottom: 0%;
-	background-color: red;
+	background-color: #FA6666;
 }
 
 .front {
@@ -124,6 +124,41 @@ html, body {
 .back {
 	z-index: 1;
 }
-button{
-	display:none;
+
+span {
+	color: white;
+	font-size: 18px;
+}
+
+input {
+	background-color: Transparent;
+	border:2px solid white;
+	outline: none;
+	color: white;
+	width: 80%;
+	font-size: 18px;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	padding:5px;
+}
+
+input:hover {
+	background-color:#FA6666;
+	
+}
+
+button {
+	background-color: white;
+	color: grey;
+	border: 2px solid white;
+	font-size: 20px;
+	font-weight:700;
+	outline: none;
+	width: 80%;
+}
+
+.back p{
+	color:white;
 }
