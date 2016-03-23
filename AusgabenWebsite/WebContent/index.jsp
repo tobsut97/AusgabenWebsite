@@ -3,17 +3,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
+<LINK rel="stylesheet" type="text/css" href="resources/css/style.css"
+	title="Default Styles">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="resources/jquery/jquery-2.2.0.min.js"></script>
-<link href="resources/css/style.css" rel="stylesheet">
+<script src="resources/jquery/jquery-2.2.0.min.js"
+	type="text/javascript"></script>
 <title>Ausgabenrechner</title>
-<script>
+<script type="text/javascript">
 	
 	$(function() {
-			
-		
  		//switching between front and back #1
 		$("#front1").click(function(){
  			$("#front1").fadeOut(800);
@@ -62,13 +62,13 @@
 		
 		//switching between front and back #4
 		$("#front4").click(function(){
-			$("#front4").css("display","none");
- 			$("#back4").css("display","block");
+			$("#front4").fadeOut(800);
+ 			$("#back4").fadeIn(800);
 		});
 		
 		$("#backToFront4").click(function(){
-			$("#back4").css("display","none");
- 			$("#front4").css("display","block");			
+			$("#front4").fadeIn(800);
+ 			$("#back4").fadeOut(800);			
 		});
 		
 /* 		$(".amountInput").val($(".amountInput").val() + "EURO ausgegeben.");
@@ -99,10 +99,10 @@
 	<div class="flip-container">
 		<div id="back2" class="back">
 			<div id="contentBack2">
-				<span>Ich habe schon wieder ...</span> <br></br> <input type="text"
-					class="amountInput" id="amountEntertainment"> <br></br> <span>Das
-					Geld war ... </span> <br></br> <input type="text" id="notesEntertainment">
-				<br></br>
+				<span>Ich habe schon wieder ...</span><input type="text"
+					class="amountInput" id="amountEntertainment">   <span>Das
+					Geld war ... </span> <input type="text" id="notesEntertainment">
+				 
 				<button type="button" id="backToFront2">JA ICH HABE</button>
 			</div>
 		</div>
@@ -111,10 +111,10 @@
 	<div class="flip-container">
 		<div id="back1" class="back">
 			<div id="contentBack1">
-				<span>Ich habe schon wieder ...</span> <br></br> <input type="text"
-					class="amountInput" id="amountShopping"> <br></br> <span>Das
-					Geld war ... </span> <br></br> <input type="text" id="notesShopping">
-				<br></br>
+				<span>Ich habe schon wieder ...</span>   <input type="text"
+					class="amountInput" id="amountShopping">   <span>Das
+					Geld war ... </span>   <input type="text" id="notesShopping">
+				 
 				<button type="button" id="backToFront1">JA ICH HABE</button>
 			</div>
 		</div>
@@ -123,10 +123,10 @@
 	<div class="flip-container">
 		<div id="back4" class="back">
 			<div id="contentBack4">
-				<span>Ich habe schon wieder ...</span> <br></br> <input type="text"
-					class="amountInput" id="amountPiggy"> <br></br> <span>Das
-					Geld war ... </span> <br></br> <input type="text" id="notesPiggy">
-				<br></br>
+				<span>Ich habe schon wieder ...</span>   <input type="text"
+					class="amountInput" id="amountPiggy">   <span>Das
+					Geld war ... </span>   <input type="text" id="notesPiggy">
+				 
 				<button type="button" id="backToFront4">JA ICH HABE</button>
 			</div>
 		</div>
@@ -135,10 +135,10 @@
 	<div class="flip-container">
 		<div id="back3" class="back">
 			<div id="contentBack3">
-				<span>Ich habe schon wieder ...</span> <br></br> <input type="text"
-					class="amountInput" id="amountHeart"> <br></br> <span>Das
-					Geld war ... </span> <br></br> <input type="text" id="notesHeart">
-				<br></br>
+				<span>Ich habe schon wieder ...</span>  
+				<input type="text" class="amountInput" id="amountHeart">  
+				<span>Das Geld war ... </span>   <input
+					type="text" id="notesHeart">  
 				<button type="button" id="backToFront3">JA ICH HABE</button>
 			</div>
 		</div>
