@@ -36,6 +36,12 @@
 			var amount = $("#amountEntertainment").val();
 			var notes = $("#notesEntertainment").val();
 			if (amount == "" || notes == "") {
+				if (amount == "") {
+					alert("bitte gib an wieviel geld du ausgegeben hast.");
+				}
+				if(notes == ""){
+					alert("war das geld klug investiert?");
+				}
 				return;
 			}
 			insertEntertainment(amount,notes);
@@ -100,9 +106,9 @@
 		<div id="back2" class="back">
 			<div id="contentBack2">
 				<span>Ich habe schon wieder ...</span><input type="text"
-					class="amountInput" id="amountEntertainment">   <span>Das
+					class="amountInput" id="amountEntertainment"> <span>Das
 					Geld war ... </span> <input type="text" id="notesEntertainment">
-				 
+
 				<button type="button" id="backToFront2">JA ICH HABE</button>
 			</div>
 		</div>
@@ -111,10 +117,10 @@
 	<div class="flip-container">
 		<div id="back1" class="back">
 			<div id="contentBack1">
-				<span>Ich habe schon wieder ...</span>   <input type="text"
-					class="amountInput" id="amountShopping">   <span>Das
-					Geld war ... </span>   <input type="text" id="notesShopping">
-				 
+				<span>Ich habe schon wieder ...</span> <input type="text"
+					class="amountInput" id="amountShopping"> <span>Das
+					Geld war ... </span> <input type="text" id="notesShopping">
+
 				<button type="button" id="backToFront1">JA ICH HABE</button>
 			</div>
 		</div>
@@ -123,10 +129,10 @@
 	<div class="flip-container">
 		<div id="back4" class="back">
 			<div id="contentBack4">
-				<span>Ich habe schon wieder ...</span>   <input type="text"
-					class="amountInput" id="amountPiggy">   <span>Das
-					Geld war ... </span>   <input type="text" id="notesPiggy">
-				 
+				<span>Ich habe schon wieder ...</span> <input type="text"
+					class="amountInput" id="amountPiggy"> <span>Das Geld
+					war ... </span> <input type="text" id="notesPiggy">
+
 				<button type="button" id="backToFront4">JA ICH HABE</button>
 			</div>
 		</div>
@@ -135,10 +141,9 @@
 	<div class="flip-container">
 		<div id="back3" class="back">
 			<div id="contentBack3">
-				<span>Ich habe schon wieder ...</span>  
-				<input type="text" class="amountInput" id="amountHeart">  
-				<span>Das Geld war ... </span>   <input
-					type="text" id="notesHeart">  
+				<span>Ich habe schon wieder ...</span> <input type="text"
+					class="amountInput" id="amountHeart"> <span>Das Geld
+					war ... </span> <input type="text" id="notesHeart">
 				<button type="button" id="backToFront3">JA ICH HABE</button>
 			</div>
 		</div>
