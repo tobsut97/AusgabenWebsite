@@ -3,6 +3,7 @@ package at.sut.ausgaben.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +12,12 @@ import at.sut.ausgaben.vo.Entertainment;
 import at.sut.ausgaben.vo.Love;
 
 public class LoveDao {
-	private static final String ipAddress = "192.168.157.135";
+	private static final String ipAddress = "192.168.157.136";
 	private static final String databaseName = "ausgaben";
 	private static final String userName = "test";
 	private static final String password = "test";
 	
-	// holt alle entertainment einträge
+	// holt alle love einträge
 	public List<Love> getAllLove() throws Exception {
 		List<Love> loveList = new ArrayList<Love>();
 		Connection connection = getConnection();
@@ -33,6 +34,20 @@ public class LoveDao {
 		stmt.close();
 		connection.close();
 		return loveList;
+	}
+	
+	public void insertLove(Love l) throws Exception {
+		Connection connection = getConnection();
+		Statement stmt = connection.createStatement();
+		java.util.Date date = new java.util.Date();
+		stmt.executeUpdate("insert into love (amount,notes,date) VALUES ('"
+				+ l.getAmount()
+				+ "','"
+				+ l.getNotes()
+				+ "','"
+				+ (new Timestamp(date.getTime())) + "');");
+		stmt.close();
+		connection.close();
 	}
 	
 	private Connection getConnection() throws Exception {

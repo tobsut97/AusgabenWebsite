@@ -125,7 +125,6 @@ html, body {
 	z-index: 1;
 }
 
-
 input {
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -256,7 +255,7 @@ span {
 
 #back4 button:hover {
 	background-color: white;
-	color:#FA6666;
+	color: #FA6666;
 }
 
 #contentBack3 input {
@@ -276,9 +275,11 @@ span {
 #contentBack3 input:hover {
 	background-color: white;
 }
-#contentBack3 span{
-	color:#9069FB;
+
+#contentBack3 span {
+	color: #9069FB;
 }
+
 #back3 button {
 	background-color: #9069FB;
 	color: white;
@@ -299,3 +300,6 @@ span {
 	color: #9069FB;
 }
 
+img{
+	cursor:pointer;
+}

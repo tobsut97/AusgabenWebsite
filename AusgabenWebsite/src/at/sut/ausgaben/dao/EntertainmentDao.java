@@ -3,7 +3,6 @@ package at.sut.ausgaben.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -12,7 +11,7 @@ import java.util.List;
 import at.sut.ausgaben.vo.Entertainment;
 
 public class EntertainmentDao {
-	private static final String ipAddress = "192.168.157.135";
+	private static final String ipAddress = "192.168.157.136";
 	private static final String databaseName = "ausgaben";
 	private static final String userName = "test";
 	private static final String password = "test";

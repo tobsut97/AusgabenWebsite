@@ -2,6 +2,9 @@ package at.sut.ausgaben.vo;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Love {
 	private int idLove;
 	private String notes;

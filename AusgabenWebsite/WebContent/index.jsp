@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<LINK rel="stylesheet" type="text/css" href="resources/css/style.css"
-	title="Default Styles">
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="resources/css/style.css"
+	title="DefaultStyles">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="resources/jquery/jquery-2.2.0.min.js"
@@ -20,7 +20,7 @@
  			$("#back1").fadeIn(800);
 		});
 		
-		$("#backToFront1").click(function(){
+		$("#backIMG1").click(function(){
 			$("#front1").fadeIn(800);
  			$("#back1").fadeOut(800);	
 		});
@@ -35,23 +35,21 @@
 		$("#backToFront2").click(function(){
 			var amount = $("#amountEntertainment").val();
 			var notes = $("#notesEntertainment").val();
-			if (amount == "" || notes == "") {
-				if (amount == "") {
-					alert("bitte gib an wieviel geld du ausgegeben hast.");
-				}
-				if(notes == ""){
-					alert("war das geld klug investiert?");
-				}
-				return;
-			}
+			checkInputs(amount, notes);
 			insertEntertainment(amount,notes);
 			alert("dialog created succesfully");
 			$("#amountEntertainment").val('');
 			$("#notesEntertainment").val('');
 			$("#dialogEntertainment").show();
-			$("#front2").fadeIn(800);
- 			$("#back2").fadeOut(800);		
+/* 			$("#front2").fadeIn(800);
+ 			$("#back2").fadeOut(800);	 */	
 		});
+		
+		$("#backIMG2").click(function(){
+			$("#front2").fadeIn(800);
+ 			$("#back2").fadeOut(800);	
+		});
+		
 
 		//switching between front and back #3
 		
@@ -60,7 +58,7 @@
  			$("#back3").fadeIn(800);
 		});
 		
-		$("#backToFront3").click(function(){
+		$("#backIMG3").click(function(){
 			$("#front3").fadeIn(800);
  			$("#back3").fadeOut(800);			
 		});
@@ -73,6 +71,16 @@
 		});
 		
 		$("#backToFront4").click(function(){
+			var amount = $("#amountHeart").val();
+			var notes = $("#notesHeart").val();
+			insertLove(amount,notes);
+			$("#amountEntertainment").val('');
+			$("#notesEntertainment").val('');
+			$("#front4").fadeIn(800);
+ 			$("#back4").fadeOut(800);			
+		});
+		
+		$("#backIMG4").click(function(){
 			$("#front4").fadeIn(800);
  			$("#back4").fadeOut(800);			
 		});
@@ -97,6 +105,37 @@
 				}
 			});
 		}
+ 
+ 		//insert new love
+ 		function insertLove(amount,notes){
+ 			var postData={};
+ 			postData.amount = amount;
+ 			postData.notes = notes;
+ 			$.ajax({
+ 				dataType:'json',
+ 				contentType:'application/json',
+ 				type :'POST',
+ 				url : '<%=request.getContextPath()%>/rest/Love/',
+				data : JSON.stringify(postData),
+				statusCode : {
+					201 : function(data) {
+						alert("love created successfully");
+					}
+				}
+			});
+		}
+
+		function checkInputs(amount, notes) {
+			if (amount == "" || notes == "") {
+				if (amount == "") {
+					alert("bitte gib an wieviel geld du ausgegeben hast.");
+				}
+				if (notes == "") {
+					alert("war das geld klug investiert?");
+				}
+				return;
+			}
+		}
 
 	});
 </script>
@@ -111,6 +150,11 @@
 
 				<button type="button" id="backToFront2">JA ICH HABE</button>
 			</div>
+			<div id="backIcon2">
+				<img src="resources/images/arrowRed.svg" alt="back" width="50"
+					height="50" style="position: relative; top: 15px; left: 15px;" id="backIMG2">
+				<span style="color: #FA6666; margin-left:10px;">ZURÜCK</span>
+			</div>
 		</div>
 		<div id="front2" class="front"></div>
 	</div>
@@ -123,6 +167,11 @@
 
 				<button type="button" id="backToFront1">JA ICH HABE</button>
 			</div>
+			<div id="backIcon1">
+				<img src="resources/images/arrowYellow.svg" alt="back" width="50"
+					height="50" style="position: relative; top: 15px; left: 15px;" id="backIMG1">
+				<span style="color: #FBEF69; margin-left:10px;">ZURÜCK</span>
+			</div>
 		</div>
 		<div id="front1" class="front"></div>
 	</div>
@@ -130,10 +179,15 @@
 		<div id="back4" class="back">
 			<div id="contentBack4">
 				<span>Ich habe schon wieder ...</span> <input type="text"
-					class="amountInput" id="amountPiggy"> <span>Das Geld
-					war ... </span> <input type="text" id="notesPiggy">
+					class="amountInput" id="amountHeart"> <span>Das Geld
+					war ... </span> <input type="text" id="notesHeart">
 
 				<button type="button" id="backToFront4">JA ICH HABE</button>
+			</div>
+			<div id="backIcon4">
+				<img src="resources/images/arrowGreen.svg" alt="back" width="50"
+					height="50" style="position: relative; top: 15px; left: 15px;" id="backIMG4">
+				<span style="color: #98E466; margin-left:10px;">ZURÜCK</span>
 			</div>
 		</div>
 		<div id="front4" class="front"></div>
@@ -142,9 +196,14 @@
 		<div id="back3" class="back">
 			<div id="contentBack3">
 				<span>Ich habe schon wieder ...</span> <input type="text"
-					class="amountInput" id="amountHeart"> <span>Das Geld
-					war ... </span> <input type="text" id="notesHeart">
+					class="amountInput" id="amountPiggy"> <span>Das Geld
+					war ... </span> <input type="text" id="notesPiggy">
 				<button type="button" id="backToFront3">JA ICH HABE</button>
+			</div>
+			<div id="backIcon3">
+				<img src="resources/images/arrowViolett.svg" alt="back" width="50"
+					height="50" style="position: relative; top: 15px; left: 15px;" id="backIMG3">
+				<span style="color: #9069FB; margin-left:10px;">ZURÜCK</span>
 			</div>
 		</div>
 		<div id="front3" class="front"></div>
