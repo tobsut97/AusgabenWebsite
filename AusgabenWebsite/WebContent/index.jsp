@@ -1,18 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
+<%@page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
-<link rel="stylesheet" type="text/css" href="resources/css/style.css"
-	title="DefaultStyles">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="resources/css/style.css" title="DefaultStyles">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="resources/jquery/jquery-2.2.0.min.js"
-	type="text/javascript"></script>
 <title>Ausgabenrechner</title>
+<script src="resources/jquery/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-	
 	$(function() {
  		//switching between front and back #1
 		$("#front1").click(function(){
@@ -41,8 +38,6 @@
 			$("#amountEntertainment").val('');
 			$("#notesEntertainment").val('');
 			$("#dialogEntertainment").show();
-/* 			$("#front2").fadeIn(800);
- 			$("#back2").fadeOut(800);	 */	
 		});
 		
 		$("#backIMG2").click(function(){
