@@ -1,16 +1,20 @@
-<%@page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-
 <!DOCTYPE html>
+<%@page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="resources/css/style.css" title="DefaultStyles">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ausgabenrechner</title>
 <script src="resources/jquery/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(function() {
+		$("#statisticsButton").click(function(){
+			alert("statistiken");
+		});
+		
  		//switching between front and back #1
 		$("#front1").click(function(){
  			$("#front1").fadeOut(800);
@@ -136,6 +140,7 @@
 </script>
 </head>
 <body>
+	<img src="resources/images/StatisticsIcon2.svg" alt="back" style="position: absolute; top: 36%; left: 35%; z-index:201; width:30%; height:30%;" id="statisticsButton">
 	<div class="flip-container">
 		<div id="back2" class="back">
 			<div id="contentBack2">
@@ -147,8 +152,8 @@
 			</div>
 			<div id="backIcon2">
 				<img src="resources/images/arrowRed.svg" alt="back" width="50"
-					height="50" style="position: relative; top: 15px; left: 15px;" id="backIMG2">
-				<span style="color: #FA6666; margin-left:10px;">ZURÜCK</span>
+					height="50" style="position: relative; top: 15px; left: 15px;"
+					id="backIMG2"> <span style="color: #FA6666; margin-left: 10px;">ZURÜCK</span>
 			</div>
 		</div>
 		<div id="front2" class="front"></div>
@@ -159,13 +164,12 @@
 				<span>Ich habe schon wieder ...</span> <input type="text"
 					class="amountInput" id="amountShopping"> <span>Das
 					Geld war ... </span> <input type="text" id="notesShopping">
-
 				<button type="button" id="backToFront1">JA ICH HABE</button>
 			</div>
 			<div id="backIcon1">
 				<img src="resources/images/arrowYellow.svg" alt="back" width="50"
-					height="50" style="position: relative; top: 15px; left: 15px;" id="backIMG1">
-				<span style="color: #FBEF69; margin-left:10px;">ZURÜCK</span>
+					height="50" style="position: relative; top: 15px; left: 15px;"
+					id="backIMG1"> <span style="color: #FBEF69; margin-left: 10px;">ZURÜCK</span>
 			</div>
 		</div>
 		<div id="front1" class="front"></div>
@@ -181,8 +185,9 @@
 			</div>
 			<div id="backIcon4">
 				<img src="resources/images/arrowGreen.svg" alt="back" width="50"
-					height="50" style="position: relative; top: 15px; left: 15px;" id="backIMG4">
-				<span style="color: #98E466; margin-left:10px;">ZURÜCK</span>
+					height="50" style="position: relative; top: 15px; left: 15px;"
+					id="backIMG4"> <span
+					style="color: #98E466; margin-left: 10px;">ZURÜCK</span>
 			</div>
 		</div>
 		<div id="front4" class="front"></div>
@@ -197,8 +202,9 @@
 			</div>
 			<div id="backIcon3">
 				<img src="resources/images/arrowViolett.svg" alt="back" width="50"
-					height="50" style="position: relative; top: 15px; left: 15px;" id="backIMG3">
-				<span style="color: #9069FB; margin-left:10px;">ZURÜCK</span>
+					height="50" style="position: relative; top: 15px; left: 15px;"
+					id="backIMG3"> <span
+					style="color: #9069FB; margin-left: 10px;">ZURÜCK</span>
 			</div>
 		</div>
 		<div id="front3" class="front"></div>

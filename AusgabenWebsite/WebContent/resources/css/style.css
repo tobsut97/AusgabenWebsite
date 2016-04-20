@@ -1,6 +1,6 @@
 body {
 	font-family: "Helvetica";
-} 
+}
 
 html, body {
 	padding: 0;
@@ -23,6 +23,11 @@ html, body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-position: center;
+	left: 0%;
+	right: 50%;
+	bottom: 50%;
+	height: 50%;
+	width: 50%;
 }
 
 #back1 {
@@ -116,6 +121,7 @@ html, body {
 	bottom: 0%;
 	background-color: #FA6666;
 }
+
 
 .front {
 	z-index: 200;
@@ -275,7 +281,7 @@ span {
 #contentBack3 input:hover {
 	background-color: white;
 	border-color: #9069FB;
-	border-style:solid;
+	border-style: solid;
 }
 
 #contentBack3 span {
@@ -302,7 +308,6 @@ span {
 	color: #9069FB;
 }
 
-
-img{
-	cursor:pointer;
+img {
+	cursor: pointer;
 }
