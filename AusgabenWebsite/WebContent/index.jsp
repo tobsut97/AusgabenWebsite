@@ -4,15 +4,22 @@
 <html>
 <head>
 <meta content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="resources/css/style.css" title="DefaultStyles">
+<link rel="stylesheet" type="text/css" href="resources/css/style.css"
+	title="DefaultStyles">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ausgabenrechner</title>
-<script src="resources/jquery/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="resources/jquery/jquery-2.2.0.min.js"
+	type="text/javascript"></script>
 <script type="text/javascript">
 	$(function() {
-		$("#statisticsButton").click(function(){
-			alert("statistiken");
+		$("#openStatistics").click(function(){
+			OpenStatistics();
+		});
+		
+		$("#closeStatistics").click(function(){
+			CloseStatistics();
 		});
 		
  		//switching between front and back #1
@@ -136,11 +143,28 @@
 			}
 		}
 
+		function OpenStatistics() {
+			document.getElementById("myNav").style.height = "100%";
+		}
+
+		function CloseStatistics() {
+			document.getElementById("myNav").style.height = "0%";
+		}
+
 	});
 </script>
 </head>
 <body>
-	<img src="resources/images/StatisticsIcon2.svg" alt="back" style="position: absolute; top: 36%; left: 35%; z-index:201; width:30%; height:30%;" id="statisticsButton">
+	<div id="openStatistics">
+		<div class="circle"></div>
+		<div id="diagramY"></div>
+		<div id="diagramX"></div>
+		<div id="dataBlock1"></div>
+		<div id="dataBlock2"></div>
+		<div id="dataBlock3"></div>
+	</div>
+	<!-- 	<img src="resources/images/StatisticsIcon2.svg" alt="back" style="position: absolute; top: 36%; left: 35%; z-index:201; width:30%; height:30%;" id="statisticsButton">
+ -->
 	<div class="flip-container">
 		<div id="back2" class="back">
 			<div id="contentBack2">
@@ -153,7 +177,8 @@
 			<div id="backIcon2">
 				<img src="resources/images/arrowRed.svg" alt="back" width="50"
 					height="50" style="position: relative; top: 15px; left: 15px;"
-					id="backIMG2"> <span style="color: #FA6666; margin-left: 10px;">ZURÜCK</span>
+					id="backIMG2"> <span
+					style="color: #FA6666; margin-left: 10px;">ZURÜCK</span>
 			</div>
 		</div>
 		<div id="front2" class="front"></div>
@@ -169,7 +194,8 @@
 			<div id="backIcon1">
 				<img src="resources/images/arrowYellow.svg" alt="back" width="50"
 					height="50" style="position: relative; top: 15px; left: 15px;"
-					id="backIMG1"> <span style="color: #FBEF69; margin-left: 10px;">ZURÜCK</span>
+					id="backIMG1"> <span
+					style="color: #FBEF69; margin-left: 10px;">ZURÜCK</span>
 			</div>
 		</div>
 		<div id="front1" class="front"></div>
@@ -208,6 +234,23 @@
 			</div>
 		</div>
 		<div id="front3" class="front"></div>
+	</div>
+	<div id="myNav" class="overlay">
+		<a id="closeStatistics">&times;</a>
+		<nav class="side-nav">
+			<ul>
+				<li><a href="">SHOPPING</a></li>
+				
+				<li><a href="">ENTERTAINMENT</a></li>
+				<li><a href="">SAVED</a></li>
+				<li><a href="">SWEETHEART</a></li>
+				<li><a href="">OVERALL</a></li>
+			</ul>
+		</nav>
+		<!-- 			<div class="statisticsCategory">SHOPPING</div>
+			<div class="statisticsCategory">ENTERTAINMENT</div>
+			<div class="statisticsCategory">SAVED</div>
+			<div class="statisticsCategory">SWEETHEART</div> -->
 	</div>
 </body>
 </html>
