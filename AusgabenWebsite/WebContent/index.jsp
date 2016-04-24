@@ -180,12 +180,13 @@
 </head>
 <body>
 	<div id="openStatistics">
-		<div class="circle"></div>
+
+		<!-- <div class="circle"></div>
 		<div id="diagramY"></div>
 		<div id="diagramX"></div>
 		<div id="dataBlock1"></div>
 		<div id="dataBlock2"></div>
-		<div id="dataBlock3"></div>
+		<div id="dataBlock3"></div> -->
 	</div>
 	<!-- 	<img src="resources/images/StatisticsIcon2.svg" alt="back" style="position: absolute; top: 36%; left: 35%; z-index:201; width:30%; height:30%;" id="statisticsButton">
  -->
@@ -260,7 +261,7 @@
 		<div id="front3" class="front"></div>
 	</div>
 	<div id="Statistics" class="overlay">
-		<a id="closeStatistics">&times;</a>
+		<a id="closeStatistics">X</a>
 		<nav class="side-nav">
 			<ul>
 				<li><a href="">SHOPPING</a></li>
@@ -270,7 +271,7 @@
 				<li><a href="">OVERALL</a></li>
 			</ul>
 		</nav>
-		<div id="headingStatistics">
+		<div id="statistics-mainContent">
 			<h3>Last entries</h3>
 			<div id="data-content">
 				<table>
@@ -283,19 +284,32 @@
 						<td>75 Euro</td>
 						<td>Some clothes</td>
 						<td>2016-04-24</td>
+						<td><img src="resources/images/tool.svg" alt="remove"
+							width="25" height="25"></td>
+						<td><img src="resources/images/symbol.svg" alt="mark"
+							width="25" height="25"></td>
 					</tr>
 					<tr>
 						<td>75 Euro</td>
 						<td>Some clothes</td>
 						<td>2016-04-24</td>
+						<td><img src="resources/images/tool.svg" alt="remove"
+							width="25" height="25"></td>
+						<td><img src="resources/images/symbol.svg" alt="mark"
+							width="25" height="25"></td>
 					</tr>
 					<tr>
 						<td>75 Euro</td>
 						<td>Some clothes</td>
 						<td>2016-04-24</td>
+						<td><img src="resources/images/tool.svg" alt="remove"
+							width="25" height="25"></td>
+						<td><img src="resources/images/symbol.svg" alt="mark"
+							width="25" height="25"></td>
 					</tr>
 				</table>
 			</div>
+			<h3>Anytime</h3>
 		</div>
 	</div>
 </body>

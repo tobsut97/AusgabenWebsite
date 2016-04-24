@@ -54,7 +54,6 @@ html, body {
 	background-size: 60% 60%;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-position: center;
 }
 
 #back2 {
@@ -311,65 +310,18 @@ img, a {
 	cursor: pointer;
 }
 
-.circle {
-	height: 225px;
-	width: 225px;
-	border-radius: 50%;
-	background-color: black;
-	position: absolute;
-	top: 36%;
-	left: 43%;
+#openStatistics {
 	z-index: 201;
-}
-
-#diagramY {
-	height: 110px;
-	width: 5px;
-	background-color: white;
-	z-index: 201;
-	position: absolute;
-	top: 44%;
-	left: 46%;
-}
-
-#diagramX {
-	height: 5px;
-	width: 140px;
-	background-color: white;
-	z-index: 201;
-	position: absolute;
-	top: 57.5%;
-	left: 46%;
-}
-
-#dataBlock1 {
-	height: 60px;
-	width: 35px;
-	background-color: white;
-	z-index: 201;
-	position: absolute;
-	top: 49%;
-	left: 46.7%;
-}
-
-#dataBlock2 {
-	height: 70px;
-	width: 35px;
-	background-color: white;
-	z-index: 201;
-	position: absolute;
-	top: 47.7%;
-	left: 49.3%;
-}
-
-#dataBlock3 {
-	height: 80px;
-	width: 35px;
-	background-color: white;
-	z-index: 201;
-	position: absolute;
-	top: 46.4%;
-	left: 51.99%;
+  	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+	background-image: url("../images/StatisticsIcon2.svg");
+	background-size: 40% 40%;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .overlay {
@@ -389,7 +341,7 @@ img, a {
 	position: absolute;
 	top: 20px;
 	right: 45px;
-	font-size: 60px !important;
+	font-size: 50px !important;
 	cursor: pointer;
 }
 
@@ -449,7 +401,7 @@ h3 {
 	color: #12B37E;
 }
 
-#headingStatistics {
+#statistics-mainContent {
 	position: relative;
 	top: 1vh;
 	left: 30vw;
@@ -468,10 +420,11 @@ table {
 th, td {
 	padding: 8px;
 	text-align: left;
-	font-family:'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 1.3em;
 }
-td{
+
+td {
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-size: 1.1em;
 }
