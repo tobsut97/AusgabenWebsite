@@ -174,7 +174,7 @@ input {
 	color: #FA6666;
 }
 
-span {
+.flip-container span {
 	color: white;
 	font-size: 24px;
 	font-weight: bolder;
@@ -307,7 +307,7 @@ span {
 	color: #9069FB;
 }
 
-img {
+img, a {
 	cursor: pointer;
 }
 
@@ -393,67 +393,89 @@ img {
 	cursor: pointer;
 }
 
-.statisticsCategory{
-	width:25vw;
-	height:25vh;
-	background-color:#B3B3B3;
-	font-family: Open Sans;
-	font-size:24px;
-	font-weight:bold;
-	text-align:center;
-	color:white;
-}
-
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
- 	position:absolute;
- 	top:5%;
- 	left:5%;
-    background-color:white;
-    border-radius:2px;
-    width:22vw;
-}
-li{
-	margin:25px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	background-color: white;
+	border-radius: 2px;
+	width: 22vw;
 }
 
-li a {
-    display: block;
-    width:25vw;
-}
-.side-nav{
-	position:absolute;
-	top:0;
-	left:0;
-	background-color:#12B37E;
-	width:25vw;
-	height:100vh;
-	overflow-x:hidden;
+li {
+	margin: 25px;
 }
 
-.side-nav a, a:visited,a:active {
-	color:#12B37E;
-	text-decoration:none;
+.side-nav li a {
+	display: block;
+	width: 25vw;
+}
+
+.side-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #12B37E;
+	width: 25vw;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+.side-nav a, a:visited, a:active {
+	color: #12B37E;
+	text-decoration: none;
 	border-bottom: 2px solid #12B37E;
-	width:200px; 
+	width: 200px;
 	transition: 0.5s ease;
-	margin:15px;
-	font-size:1.4em;
+	margin: 15px;
+	font-size: 1.4em;
 	font-family: 'Open Sans', sans-serif;
-	font-weight:700;
+	font-weight: 700;
 }
-.side-nav a:hover{
+
+.side-nav a:hover {
 	border-bottom: 2px solid transparent;
 	width: 0px;
 }
-/* a:visited{
-	color:#12B37E;
+
+h3 {
+	z-index: 203;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2.5em;
+	font-weight: 800;
+	color: #12B37E;
 }
-a:hover{
-	color:#12B37E;
+
+#headingStatistics {
+	position: relative;
+	top: 1vh;
+	left: 30vw;
 }
-a:active{
-	color:#12B37E;
-} */
+
+.data {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 1.4em;
+}
+
+table {
+	width: 60vw;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 8px;
+	text-align: left;
+	font-family:'Open Sans', sans-serif;
+	font-size: 1.3em;
+}
+td{
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 1.1em;
+}
+
+tr {
+	border-bottom: 1pt solid #BFCCC0;
+}

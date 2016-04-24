@@ -6,7 +6,11 @@
 <meta content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="resources/css/style.css"
 	title="DefaultStyles">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+<link
+	href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800'
+	rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow'
+	rel='stylesheet' type='text/css'>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ausgabenrechner</title>
@@ -130,6 +134,26 @@
 				}
 			});
 		}
+ 		
+ 		//loadEntertainments
+ 		function loadEntertainment(){
+				$.ajax({
+ 				headers:{
+ 					Accept:'application/json'
+ 				},
+				dataType:'json',
+ 				type:'GET',
+ 				url:'<%=request.getContextPath()%>/rest/Entertainment/',
+				statusCode : {
+					200 : function(data) {
+						console.log(data);
+						if (data == null) {
+							console.log("data null");
+						}
+					}
+				}
+			});
+		}
 
 		function checkInputs(amount, notes) {
 			if (amount == "" || notes == "") {
@@ -144,11 +168,11 @@
 		}
 
 		function OpenStatistics() {
-			document.getElementById("myNav").style.height = "100%";
+			document.getElementById("Statistics").style.height = "100%";
 		}
 
 		function CloseStatistics() {
-			document.getElementById("myNav").style.height = "0%";
+			document.getElementById("Statistics").style.height = "0%";
 		}
 
 	});
@@ -235,22 +259,44 @@
 		</div>
 		<div id="front3" class="front"></div>
 	</div>
-	<div id="myNav" class="overlay">
+	<div id="Statistics" class="overlay">
 		<a id="closeStatistics">&times;</a>
 		<nav class="side-nav">
 			<ul>
 				<li><a href="">SHOPPING</a></li>
-				
 				<li><a href="">ENTERTAINMENT</a></li>
 				<li><a href="">SAVED</a></li>
 				<li><a href="">SWEETHEART</a></li>
 				<li><a href="">OVERALL</a></li>
 			</ul>
 		</nav>
-		<!-- 			<div class="statisticsCategory">SHOPPING</div>
-			<div class="statisticsCategory">ENTERTAINMENT</div>
-			<div class="statisticsCategory">SAVED</div>
-			<div class="statisticsCategory">SWEETHEART</div> -->
+		<div id="headingStatistics">
+			<h3>Last entries</h3>
+			<div id="data-content">
+				<table>
+					<tr>
+						<th>Amount</th>
+						<th>Notes</th>
+						<th>Date</th>
+					</tr>
+					<tr>
+						<td>75 Euro</td>
+						<td>Some clothes</td>
+						<td>2016-04-24</td>
+					</tr>
+					<tr>
+						<td>75 Euro</td>
+						<td>Some clothes</td>
+						<td>2016-04-24</td>
+					</tr>
+					<tr>
+						<td>75 Euro</td>
+						<td>Some clothes</td>
+						<td>2016-04-24</td>
+					</tr>
+				</table>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
