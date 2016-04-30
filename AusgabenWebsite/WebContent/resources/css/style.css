@@ -310,18 +310,22 @@ img, a {
 	cursor: pointer;
 }
 
-#openStatistics {
+#statisticButton {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
 	z-index: 201;
-  	position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin:auto;
-	background-image: url("../images/StatisticsIcon2.svg");
-	background-size: 40% 40%;
-	background-position: center;
-	background-repeat: no-repeat;
+	border: 1px solid black;
+}
+
+.svg-frame {
+	position: absolute;
+	top: 44vh;
+	left: 45.5vw;
+	z-index:201;
 }
 
 .overlay {

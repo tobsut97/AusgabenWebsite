@@ -18,7 +18,9 @@
 	type="text/javascript"></script>
 <script type="text/javascript">
 	$(function() {
-		$("#openStatistics").click(function(){
+		$table = $("#table");
+		loadEntertainment();
+		$(".svg-frame").click(function(){
 			OpenStatistics();
 		});
 		
@@ -137,23 +139,22 @@
  		
  		//loadEntertainments
  		function loadEntertainment(){
-				$.ajax({
- 				headers:{
- 					Accept:'application/json'
- 				},
-				dataType:'json',
- 				type:'GET',
- 				url:'<%=request.getContextPath()%>/rest/Entertainment/',
-				statusCode : {
-					200 : function(data) {
-						console.log(data);
-						if (data == null) {
-							console.log("data null");
-						}
-					}
+			$.ajax({
+				headers : {
+					Accept : 'application/json'
+				},
+				type:'GET',
+				url:'<%=request.getContextPath()%>/rest/Entertainment/',
+				success : function(data) {
+					data.entertainment.forEach(function(e) {
+						$table.append('<tr><td>' + e.amount + '</td><td>  '
+								+ e.notes + '</td><td>'+e.date+'</td><td>Löschen</td><td>Markieren</td></tr>');
+					});
 				}
 			});
 		}
+ 		
+ 		
 
 		function checkInputs(amount, notes) {
 			if (amount == "" || notes == "") {
@@ -179,17 +180,14 @@
 </script>
 </head>
 <body>
-	<div id="openStatistics">
-
-		<!-- <div class="circle"></div>
-		<div id="diagramY"></div>
-		<div id="diagramX"></div>
-		<div id="dataBlock1"></div>
-		<div id="dataBlock2"></div>
-		<div id="dataBlock3"></div> -->
+	<div class="svg-frame">
+		<svg width="50%" height="50%" viewbox="0 0 600 493"
+			preserveAspectRatio="xMinYMin meet">
+      <image xlink:href="resources/images/StatisticsIcon2.svg"
+				src="resources/images/StatisticsIcon2.png" alt="" width="600"
+				height="493" />
+   	</svg>
 	</div>
-	<!-- 	<img src="resources/images/StatisticsIcon2.svg" alt="back" style="position: absolute; top: 36%; left: 35%; z-index:201; width:30%; height:30%;" id="statisticsButton">
- -->
 	<div class="flip-container">
 		<div id="back2" class="back">
 			<div id="contentBack2">
@@ -274,13 +272,13 @@
 		<div id="statistics-mainContent">
 			<h3>Last entries</h3>
 			<div id="data-content">
-				<table>
+				<table id="table">
 					<tr>
 						<th>Amount</th>
 						<th>Notes</th>
 						<th>Date</th>
 					</tr>
-					<tr>
+					<!-- 					<tr>
 						<td>75 Euro</td>
 						<td>Some clothes</td>
 						<td>2016-04-24</td>
@@ -302,11 +300,8 @@
 						<td>75 Euro</td>
 						<td>Some clothes</td>
 						<td>2016-04-24</td>
-						<td><img src="resources/images/tool.svg" alt="remove"
-							width="25" height="25"></td>
-						<td><img src="resources/images/symbol.svg" alt="mark"
-							width="25" height="25"></td>
-					</tr>
+						
+					</tr> -->
 				</table>
 			</div>
 			<h3>Anytime</h3>
