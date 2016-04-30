@@ -380,7 +380,7 @@ li {
 	overflow-x: hidden;
 }
 
-.side-nav a, a:visited, a:active {
+ .side-nav a, .side-nav a:visited, .side-nav a:active {
 	color: #12B37E;
 	text-decoration: none;
 	border-bottom: 2px solid #12B37E;
@@ -390,7 +390,7 @@ li {
 	font-size: 1.4em;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
-}
+} 
 
 .side-nav a:hover {
 	border-bottom: 2px solid transparent;
