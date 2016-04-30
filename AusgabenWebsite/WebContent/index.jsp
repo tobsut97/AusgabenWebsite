@@ -34,7 +34,7 @@
  			$("#back1").fadeIn(800);
 		});
 		
-		$("#backIMG1").click(function(){
+		$("#backIcon1").click(function(){
 			$("#front1").fadeIn(800);
  			$("#back1").fadeOut(800);	
 		});
@@ -57,7 +57,7 @@
 			$("#dialogEntertainment").show();
 		});
 		
-		$("#backIMG2").click(function(){
+		$("#backIcon2").click(function(){
 			$("#front2").fadeIn(800);
  			$("#back2").fadeOut(800);	
 		});
@@ -70,7 +70,7 @@
  			$("#back3").fadeIn(800);
 		});
 		
-		$("#backIMG3").click(function(){
+		$("#backIcon3").click(function(){
 			$("#front3").fadeIn(800);
  			$("#back3").fadeOut(800);			
 		});
@@ -92,13 +92,12 @@
  			$("#back4").fadeOut(800);			
 		});
 		
-		$("#backIMG4").click(function(){
+		$("#backIcon4").click(function(){
 			$("#front4").fadeIn(800);
  			$("#back4").fadeOut(800);			
 		});
 		
-/* 		$(".amountInput").val($(".amountInput").val() + "EURO ausgegeben.");
- */		
+
 
 		//insert new entertainment
 		function insertEntertainment(amount,notes) {
@@ -147,8 +146,12 @@
 				url:'<%=request.getContextPath()%>/rest/Entertainment/',
 				success : function(data) {
 					data.entertainment.forEach(function(e) {
+						var d = new Date(e.date);
+						var day = d.getDate();
+						var month = d.getMonth();
+						var year = d.getFullYear();
 						$table.append('<tr><td>' + e.amount + '</td><td>  '
-								+ e.notes + '</td><td>'+e.date+'</td><td>Löschen</td><td>Markieren</td></tr>');
+								+ e.notes + '</td><td>'+day+''+month+''+year+'</td><td>Löschen</td><td>Markieren</td></tr>');
 					});
 				}
 			});
@@ -234,7 +237,7 @@
 			</div>
 			<div id="backIcon4">
 				<img src="resources/images/arrowGreen.svg" alt="back" width="50"
-					height="50" style="position: relative; top: 15px; left: 15px;"
+					height="50" style="position: relative; top: 250px; left: 15px;"
 					id="backIMG4"> <span
 					style="color: #98E466; margin-left: 10px;">ZURÜCK</span>
 			</div>
@@ -304,7 +307,7 @@
 					</tr> -->
 				</table>
 			</div>
-			<h3>Anytime</h3>
+			<h3>Marked</h3>
 		</div>
 	</div>
 </body>

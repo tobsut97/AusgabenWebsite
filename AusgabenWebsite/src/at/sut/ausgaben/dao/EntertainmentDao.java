@@ -45,7 +45,7 @@ public class EntertainmentDao {
 		List<Entertainment> entertainmentList = new ArrayList<Entertainment>();
 		Connection connection = getConnection();
 		Statement stmt = connection.createStatement();
-		ResultSet resultSet = stmt.executeQuery("select * from entertainment;");
+		ResultSet resultSet = stmt.executeQuery("select * from entertainment where notes >'';");
 		resultSet.first();
 		while (!(resultSet.isAfterLast())) {
 			Entertainment e = new Entertainment(resultSet.getInt(1),

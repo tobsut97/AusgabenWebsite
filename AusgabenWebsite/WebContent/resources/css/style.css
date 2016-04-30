@@ -55,6 +55,9 @@ html, body {
 	background-position: center;
 	background-repeat: no-repeat;
 }
+#backIcon2, #backIcon1, #backIcon3, #backIcon4{
+	cursor:pointer;
+}
 
 #back2 {
 	position: absolute;

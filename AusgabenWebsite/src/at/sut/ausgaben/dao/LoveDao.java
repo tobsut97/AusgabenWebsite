@@ -12,7 +12,7 @@ import at.sut.ausgaben.vo.Entertainment;
 import at.sut.ausgaben.vo.Love;
 
 public class LoveDao {
-	private static final String ipAddress = "192.168.157.139";
+	private static final String ipAddress = "192.168.157.140";
 	private static final String databaseName = "ausgaben";
 	private static final String userName = "test";
 	private static final String password = "test";
