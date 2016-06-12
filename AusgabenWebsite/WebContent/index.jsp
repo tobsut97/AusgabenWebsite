@@ -11,6 +11,7 @@
 	rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow'
 	rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,100' rel='stylesheet' type='text/css'>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ausgabenrechner</title>
@@ -237,9 +238,9 @@
 			</div>
 			<div id="backIcon4">
 				<img src="resources/images/arrowGreen.svg" alt="back" width="50"
-					height="50" style="position: relative; top: 250px; left: 15px;"
+					height="50" style="position: relative; top: 40vh; left: 15px;"
 					id="backIMG4"> <span
-					style="color: #98E466; margin-left: 10px;">ZURÜCK</span>
+					style="color:#98E466;" id="back4Span">ZURÜCK</span>
 			</div>
 		</div>
 		<div id="front4" class="front"></div>

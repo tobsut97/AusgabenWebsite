@@ -1,5 +1,6 @@
 body {
-	font-family: "Helvetica";
+	font-family: 'Roboto', sans-serif;
+	font-weight:100;
 }
 
 html, body {
@@ -57,6 +58,10 @@ html, body {
 }
 #backIcon2, #backIcon1, #backIcon3, #backIcon4{
 	cursor:pointer;
+}
+
+#backIcon2 span, #backIcon1 span, #backIcon3 span, #backIcon4 span{
+	font-weight:700;
 }
 
 #back2 {
@@ -293,7 +298,7 @@ input {
 	background-color: #9069FB;
 	color: white;
 	border: 2px solid white;
-	font-size: 20px;
+	font-size: 24px;
 	font-weight: 700;
 	outline: none;
 	padding: 10px;
@@ -438,4 +443,9 @@ td {
 
 tr {
 	border-bottom: 1pt solid #BFCCC0;
+}
+#back4Span{
+	position:relative;
+	top:38vh;
+	left:0.6vw;
 }
